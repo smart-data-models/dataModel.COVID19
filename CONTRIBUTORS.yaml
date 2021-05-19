@@ -1,9 +1,9 @@
 description: This is a compilation list of all CONTRIBUTORS across different objects (data models) alphabetically ordered. All fields are non mandatory
 contributors:
 -
- name:
- surname:
- mail:
- organization:
+ name: Har Preet
+ surname: Singh
+ mail: harpreet.singh@fiware.org
+ organization: FIWARE
  project: 
  comments: 
