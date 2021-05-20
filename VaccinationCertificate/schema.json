@@ -33,7 +33,7 @@
           "expirationDate": {
             "type": "string",
             "format": "date-time",
-            "description": "Property. Model:'https://schema.org/DateTime'. Date and time of exprity"
+            "description": "Property. Model:'https://schema.org/DateTime'. Date and time of expiry"
           },
           "issuer": {
             "anyOf": [
@@ -74,7 +74,7 @@
               },
               "recipient": {
                 "type": "object",
-                "description": "Property. The recipient of the vaccine",
+                "description": "Property. Model:'https://schema.org/Patient'. The recipient of the vaccine",
                 "properties": {
                   "givenName": {
                     "type": "string",
@@ -96,7 +96,7 @@
                   "birthDate": {
                     "type": "string",
                     "format": "date",
-                    "description": "Property. Date (in YYYY-MM-DD format) this rule applies to. The date on which the vaccine recipient was born"
+                    "description": "Property. Model:'https://schema.org/Date'. this rule applies to. The date on which the vaccine recipient was born"
                   }
                 }
               },
