@@ -1,95 +1,50 @@
 {
-    "id":"urn:ngsi-ld:dataModel:id:VINF:36225393",
-    "type":"VaccinationCertificate",
-    "description":{
-        "type":"Property",
-        "value":"COVID-19 Vaccination Certificate"
-    },
-    "issuanceDate":{
-        "type":"Property",
-        "value":"2017-01-01T01:20:00Z"
-    },
-    "expirationDate":{
-        "type":"Property",
-        "value":"2017-01-01T01:20:00Z"
-    },
-    "dateCreated":{
-        "type":"Property",
-        "value":"2017-01-01T01:20:00Z"
-    },
-    "issuer":{
-        "type":"Relationship",
-        "value":"urn:ngsi-ld:dataModel:id:VINF:12233123"
-    },
-    "credentialSubject":{
-        "batchNumber":{
-            "type":"Property",
-            "value":"1183738569"
-        },
-        "administeringCentre":{
-            "type":"Property",
-            "value":"MoH"
-        },
-        "healthProfessional":{
-            "type":"Property",
-            "value":"MoH"
-        },
-        "countryOfVaccination":{
-            "type":"Property",
-            "value":"DE"
-        },
-        "recipient":{
-            "givenName":{
-                "type":"Property",
-                "value":"XYZ"
-            },
-            "familyName":{
-                "type":"Property",
-                "value":"ABC"
-            },
-            "gender":{
-                "type":"Property",
-                "value":"male"
-            },
-            "birthDate":{
-                "type":"Property",
-                "value":{
-                    "@type":"Date",
-                    "@value":"2017-01-01"
-                }
-            },
-            "vaccine":{
-                "disease":{
-                    "type":"Property",
-                    "value":"COVID-19"
-                },
-                "atcCode":{
-                    "type":"Property",
-                    "value":"J07BX03"
-                },
-                "medicinalProductName":{
-                    "type":"Property",
-                    "value":"COVID-19 Vaccine Moderna"
-                },
-                "marketingAuthorizationHolder":{
-                    "type":"Property",
-                    "value":"Moderna Biotech"
-                }
-            }
-        },
-        "proof":{
-            "created":{
-                "type":"Property",
-                "value":"2017-01-01T01:20:00Z"
-            },
-            "proofValue":{
-                "type":"Property",
-                "value":"eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..vD_vXJCWdeGpN-qKHDIlzgGC0auRPcwp3O1sOI-gN8z3UD4pI0HO_77ob5KHhhU1ugLrrwrMsKv71mqHBn-dBg"
-            },
-            "verificationMethod":{
-                "type":"Relationship",
-                "value":"urn:ngsi-ld:dataModel:id:VINF:982271182"
-            }
+  "id": "urn:ngsi-ld:dataModel:id:VINF:36225393",
+  "type": "VaccinationCertificate",
+  "description": {
+    "type": "Text",
+    "value": "COVID-19 Vaccination Certificate"
+  },
+  "issuanceDate": {
+    "type": "DateTime",
+    "value": "2017-01-01T01:20:00Z"
+  },
+  "expirationDate": {
+    "type": "DateTime",
+    "value": "2017-01-01T01:20:00Z"
+  },
+  "dateCreated": {
+    "type": "DateTime",
+    "value": "2017-01-01T01:20:00Z"
+  },
+  "issuer": {
+    "type": "Relationship",
+    "value": "dataModel.id.VINF.12233123"
+  },
+  "credentialSubject": {
+    "type": "StructuredValue",
+    "value": {
+      "batchNumber": "1183738569",
+      "administeringCentre": "MoH",
+      "healthProfessional": "MoH",
+      "countryOfVaccination": "DE",
+      "recipient": {
+        "givenName": "XYZ",
+        "familyName": "ABC",
+        "gender": "male",
+        "birthDate": "2017-01-01",
+        "vaccine": {
+          "disease": "COVID-19",
+          "atcCode": "J07BX03",
+          "medicinalProductName": "COVID-19 Vaccine Moderna",
+          "marketingAuthorizationHolder": "Moderna Biotech"
         }
+      },
+      "proof": {
+        "created": "2017-01-01T01:20:00Z",
+        "proofValue": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..vD_vXJCWdeGpN-qKHDIlzgGC0auRPcwp3O1sOI-gN8z3UD4pI0HO_77ob5KHhhU1ugLrrwrMsKv71mqHBn-dBg",
+        "verificationMethod": "urn:ngsi-ld:dataModel:id:VINF:982271182"
+      }
     }
+  }
 }
