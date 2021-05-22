@@ -349,7 +349,9 @@ VaccinationCertificate:
       enum:    
         - VaccinationCertificate    
       type: Property    
-  required: []    
+  required:    
+    - id    
+    - type    
   type: object    
 ```  
 </details>    
