@@ -2,11 +2,13 @@ Entität: ImpfungZertifikat
 ==========================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.COVID19/blob/master/VaccinationCertificate/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Globale Beschreibung: **Beschreibung eines COVID-19-Impfscheins.**  
 
 ## Liste der Eigenschaften  
 
-Erforderliche Eigenschaften  
-- Keine erforderlichen Eigenschaften  ## Datenmodell Beschreibung der Eigenschaften  
+- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `credentialSubject`: Impfstoff, Impfereignis und Empfängerobjekt  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `expirationDate`: Datum und Uhrzeit des Ablaufs  - `id`: Eindeutiger Bezeichner der Entität  - `issuanceDate`: Datum und Uhrzeit der Ausgabe  - `issuer`: Identität des Emittenten  - `location`:   - `name`: Der Name dieses Elements.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `type`: NSGI Entity Type. es muss VaccinationCertificate sein    
+Erforderliche Eigenschaften  
+## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -354,9 +356,261 @@ VaccinationCertificate:
 ## Beispiel-Nutzlasten  
 #### VaccinationCertificate NGSI-v2 key-values Beispiel  
 Hier ist ein Beispiel für ein VaccinationCertificate im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2 bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+```json  
+{  
+  "id": "dataModel.id.VINF:36225393",  
+  "type": "VaccinationCertificate",  
+  "description": "COVID-19 Vaccination Certificate",  
+  "issuanceDate": "2017-01-01T01:20:00Z",  
+  "expirationDate": "2017-01-01T01:20:00Z",  
+  "dateCreated": "2017-01-01T01:20:00Z",  
+  "issuer": "dataModel.id.VINF:12233123",  
+  "credentialSubject": {  
+    "batchNumber": "1183738569",  
+    "administeringCentre": "MoH",  
+    "healthProfessional": "MoH",  
+    "countryOfVaccination": "DE",  
+    "recipient": {  
+      "givenName": "XYZ",  
+      "familyName": "ABC",  
+      "gender": "male",  
+      "birthDate": "2017-01-01",  
+      "vaccine": "COVID-19",  
+      "atcCode": "J07BX03",  
+      "medicinalProductName": "COVID-19 Vaccine Moderna",  
+      "marketingAuthorizationHolder": "Moderna Biotech"  
+    }  
+  },  
+  "proof": {  
+    "created": "2017-01-01T01:20:00Z",  
+    "proofValue": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..vD_vXJCWdeGpN-qKHDIlzgGC0auRPcwp3O1sOI-gN8z3UD4pI0HO_77ob5KHhhU1ugLrrwrMsKv71mqHBn-dBg",  
+    "verificationMethod": "dataModel.id.VINF.982271182"  
+  }  
+}  
+```  
 #### VaccinationCertificate NGSI-v2 normalisiert Beispiel  
 Hier ist ein Beispiel für ein VaccinationCertificate im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden und liefert die Kontextdaten einer einzelnen Entität.  
+```json  
+{  
+  "id": "urn:ngsi-ld:dataModel:id:VINF:36225393",  
+  "type": "VaccinationCertificate",  
+  "description": {  
+    "type": "Text",  
+    "value": "COVID-19 Vaccination Certificate"  
+  },  
+  "issuanceDate": {  
+    "type": "DateTime",  
+    "value": "2017-01-01T01:20:00Z"  
+  },  
+  "expirationDate": {  
+    "type": "DateTime",  
+    "value": "2017-01-01T01:20:00Z"  
+  },  
+  "dateCreated": {  
+    "type": "DateTime",  
+    "value": "2017-01-01T01:20:00Z"  
+  },  
+  "issuer": {  
+    "type": "Relationship",  
+    "value": "dataModel.id.VINF.12233123"  
+  },  
+  "credentialSubject": {  
+    "type": "StructuredValue",  
+    "value": {  
+      "batchNumber": "1183738569",  
+      "administeringCentre": "MoH",  
+      "healthProfessional": "MoH",  
+      "countryOfVaccination": "DE",  
+      "recipient": {  
+        "givenName": "XYZ",  
+        "familyName": "ABC",  
+        "gender": "male",  
+        "birthDate": "2017-01-01",  
+        "vaccine": {  
+          "disease": "COVID-19",  
+          "atcCode": "J07BX03",  
+          "medicinalProductName": "COVID-19 Vaccine Moderna",  
+          "marketingAuthorizationHolder": "Moderna Biotech"  
+        }  
+      },  
+      "proof": {  
+        "created": "2017-01-01T01:20:00Z",  
+        "proofValue": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..vD_vXJCWdeGpN-qKHDIlzgGC0auRPcwp3O1sOI-gN8z3UD4pI0HO_77ob5KHhhU1ugLrrwrMsKv71mqHBn-dBg",  
+        "verificationMethod": "urn:ngsi-ld:dataModel:id:VINF:982271182"  
+      }  
+    }  
+  }  
+}  
+```  
 #### VaccinationCertificate NGSI-LD key-values Beispiel  
 Hier ist ein Beispiel für ein VaccinationCertificate im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-LD bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+```json  
+{  
+    "id":"urn:ngsi-ld:dataModel:id:VINF:36225393",  
+    "type":"VaccinationCertificate",  
+    "description":"COVID-19 Vaccination Certificate",  
+    "issuanceDate":{  
+        "@type":"DateTime",  
+        "@value":"2017-01-01T01:20:00Z"  
+    },  
+    "expirationDate":{  
+        "@type":"DateTime",  
+        "@value":"2017-01-01T01:20:00Z"  
+    },  
+    "dateCreated":{  
+        "@type":"DateTime",  
+        "@value":"2017-01-01T01:20:00Z"  
+    },  
+    "issuer":"urn:ngsi-ld:dataModel:id:VINF:12233123",  
+    "credentialSubject":{  
+        "batchNumber":"1183738569",  
+        "administeringCentre":"MoH",  
+        "healthProfessional":"MoH",  
+        "countryOfVaccination":"DE",  
+        "recipient":{  
+            "givenName":"XYZ",  
+            "familyName":"ABC",  
+            "gender":"male",  
+            "birthDate":{  
+                "@type":"Date",  
+                "@value":"2017-01-01"  
+            },  
+            "vaccine":"COVID-19",  
+            "atcCode":"J07BX03",  
+            "medicinalProductName":"COVID-19 Vaccine Moderna",  
+            "marketingAuthorizationHolder":"Moderna Biotech"  
+        }  
+    },  
+    "proof":{  
+        "created":{  
+            "@type":"DateTime",  
+            "@value":"2017-01-01T01:20:00Z"  
+        },  
+        "proofValue":"eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..vD_vXJCWdeGpN-qKHDIlzgGC0auRPcwp3O1sOI-gN8z3UD4pI0HO_77ob5KHhhU1ugLrrwrMsKv71mqHBn-dBg",  
+        "verificationMethod":"urn:ngsi-ld:dataModel:id:VINF:982271182"  
+    },  
+    "@context":[  
+        "https://smartdatamodels.org/context.jsonld"  
+    ]  
+}  
+```  
 #### ImpfSchein NGSI-LD normalisiert Beispiel  
 Hier ist ein Beispiel für ein VaccinationCertificate im JSON-LD-Format wie normalisiert. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden und liefert die Kontextdaten einer einzelnen Entität.  
+```json  
+{  
+  "id": "urn:ngsi-ld:dataModel:id:VINF:36225393",  
+  "type": "VaccinationCertificate",  
+  "description": {  
+    "type": "Property",  
+    "value": "COVID-19 Vaccination Certificate"  
+  },  
+  "issuanceDate": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2017-01-01T01:20:00Z"  
+    }  
+  },  
+  "expirationDate": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2017-01-01T01:20:00Z"  
+    }  
+  },  
+  "dateCreated": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "DateTime",  
+      "@value": "2017-01-01T01:20:00Z"  
+    }  
+  },  
+  "issuer": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:dataModel:id:VINF:12233123"  
+  },  
+  "credentialSubject": {  
+    "batchNumber": {  
+      "type": "Property",  
+      "value": "1183738569"  
+    },  
+    "administeringCentre": {  
+      "type": "Property",  
+      "value": "MoH"  
+    },  
+    "healthProfessional": {  
+      "type": "Property",  
+      "value": "MoH"  
+    },  
+    "countryOfVaccination": {  
+      "type": "Property",  
+      "value": "DE"  
+    },  
+    "recipient": {  
+      "givenName": {  
+        "type": "Property",  
+        "value": "XYZ"  
+      },  
+      "familyName": {  
+        "type": "Property",  
+        "value": "ABC"  
+      },  
+      "gender": {  
+        "type": "Property",  
+        "value": "male"  
+      },  
+      "birthDate": {  
+        "type": "Property",  
+        "value": {  
+          "@type": "Date",  
+          "@value": "2017-01-01"  
+        }  
+      },  
+      "vaccine": {  
+        "type": "Property",  
+        "value": {  
+          "disease": {  
+            "type": "Property",  
+            "value": "COVID-19"  
+          },  
+          "atcCode": {  
+            "type": "Property",  
+            "value": "J07BX03"  
+          },  
+          "medicinalProductName": {  
+            "type": "Property",  
+            "value": "COVID-19 Vaccine Moderna"  
+          },  
+          "marketingAuthorizationHolder": {  
+            "type": "Property",  
+            "value": "Moderna Biotech"  
+          }  
+        }  
+      }  
+    },  
+    "proof": {  
+      "type": "Property",  
+      "value": {  
+        "created": {  
+          "type": "Property",  
+          "value": {  
+            "@type": "DateTime",  
+            "@value": "2017-01-01T01:20:00Z"  
+          }  
+        },  
+        "proofValue": {  
+          "type": "Property",  
+          "value": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..vD_vXJCWdeGpN-qKHDIlzgGC0auRPcwp3O1sOI-gN8z3UD4pI0HO_77ob5KHhhU1ugLrrwrMsKv71mqHBn-dBg"  
+        },  
+        "verificationMethod": {  
+          "type": "Relationship",  
+          "value": "urn:ngsi-ld:dataModel:id:VINF:982271182"  
+        }  
+      }  
+    }  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld"  
+  ]  
+}  
+```  
