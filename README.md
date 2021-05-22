@@ -1,2 +1,5 @@
 # dataModel.COVID19
-Data Models related with the management of COVID19 pandemic
+
+### List of data models
+
+The following entity types are available:
