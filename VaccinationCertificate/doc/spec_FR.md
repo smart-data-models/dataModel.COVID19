@@ -356,7 +356,7 @@ VaccinationCertificate:
 ```  
 </details>    
 ## Exemples de charges utiles  
-#### Certificat de vaccination Valeurs clés NGSI-v2 Exemple  
+#### Certificat de vaccination Valeurs-clés NGSI-v2 Exemple  
 Voici un exemple de certificat de vaccination au format JSON-LD sous forme de valeurs de clé. Ceci est compatible avec NGSI-v2 en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
