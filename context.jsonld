@@ -1,0 +1,22 @@
+{
+    "@context": {
+        "address": "https://smartdatamodels.org/dataModel.COVID19/address",
+        "alternateName": "https://smartdatamodels.org/dataModel.COVID19/alternateName",
+        "areaServed": "https://smartdatamodels.org/dataModel.COVID19/areaServed",
+        "credentialSubject": "https://smartdatamodels.org/dataModel.COVID19/credentialSubject",
+        "dataProvider": "https://smartdatamodels.org/dataModel.COVID19/dataProvider",
+        "dateCreated": "https://smartdatamodels.org/dataModel.COVID19/dateCreated",
+        "dateModified": "https://smartdatamodels.org/dataModel.COVID19/dateModified",
+        "description": "https://smartdatamodels.org/dataModel.COVID19/description",
+        "expirationDate": "https://smartdatamodels.org/dataModel.COVID19/expirationDate",
+        "id": "@id",
+        "issuanceDate": "https://smartdatamodels.org/dataModel.COVID19/issuanceDate",
+        "issuer": "https://smartdatamodels.org/dataModel.COVID19/issuer",
+        "location": "https://smartdatamodels.org/dataModel.COVID19/location",
+        "name": "https://smartdatamodels.org/dataModel.COVID19/name",
+        "owner": "https://smartdatamodels.org/dataModel.COVID19/owner",
+        "seeAlso": "https://smartdatamodels.org/dataModel.COVID19/seeAlso",
+        "source": "https://smartdatamodels.org/dataModel.COVID19/source",
+        "type": "@type"
+    }
+}
