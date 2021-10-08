@@ -1,22 +1,22 @@
 {
     "@context": {
-        "address": "https://smartdatamodels.org/dataModel.COVID19/address",
-        "alternateName": "https://smartdatamodels.org/dataModel.COVID19/alternateName",
-        "areaServed": "https://smartdatamodels.org/dataModel.COVID19/areaServed",
+        "address": "https://smartdatamodels.org/address",
+        "alternateName": "https://smartdatamodels.org/alternateName",
+        "areaServed": "https://smartdatamodels.org/areaServed",
         "credentialSubject": "https://smartdatamodels.org/dataModel.COVID19/credentialSubject",
-        "dataProvider": "https://smartdatamodels.org/dataModel.COVID19/dataProvider",
-        "dateCreated": "https://smartdatamodels.org/dataModel.COVID19/dateCreated",
-        "dateModified": "https://smartdatamodels.org/dataModel.COVID19/dateModified",
+        "dataProvider": "https://smartdatamodels.org/dataProvider",
+        "dateCreated": "https://smartdatamodels.org/dateCreated",
+        "dateModified": "https://smartdatamodels.org/dateModified",
         "description": "http://purl.org/dc/terms/description",
         "expirationDate": "https://smartdatamodels.org/dataModel.COVID19/expirationDate",
         "id": "@id",
         "issuanceDate": "https://smartdatamodels.org/dataModel.COVID19/issuanceDate",
         "issuer": "https://smartdatamodels.org/dataModel.COVID19/issuer",
         "location": "ngsi-ld:location",
-        "name": "https://smartdatamodels.org/dataModel.COVID19/name",
-        "owner": "https://smartdatamodels.org/dataModel.COVID19/owner",
-        "seeAlso": "https://smartdatamodels.org/dataModel.COVID19/seeAlso",
-        "source": "https://smartdatamodels.org/dataModel.COVID19/source",
+        "name": "https://smartdatamodels.org/name",
+        "owner": "https://smartdatamodels.org/owner",
+        "seeAlso": "https://smartdatamodels.org/seeAlso",
+        "source": "https://smartdatamodels.org/source",
         "type": "@type"
     }
 }
