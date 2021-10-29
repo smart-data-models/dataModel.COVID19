@@ -423,7 +423,7 @@ VaccinationCertificate:
 }  
 ```  
 #### VaccinationCertificate NGSI-v2 normalized Beispiel  
-Hier ist ein Beispiel für ein VaccinationCertificate im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für ein VaccinationCertificate im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-v2 kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "urn:ngsi-ld:dataModel:id:VINF:36225393",  
