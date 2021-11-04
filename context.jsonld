@@ -14,6 +14,7 @@
         "issuer": "https://smartdatamodels.org/dataModel.COVID19/issuer",
         "location": "ngsi-ld:location",
         "name": "https://smartdatamodels.org/name",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
         "owner": "https://smartdatamodels.org/owner",
         "seeAlso": "https://smartdatamodels.org/seeAlso",
         "source": "https://smartdatamodels.org/source",
