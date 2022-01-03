@@ -1,0 +1,8 @@
+notesHeader:
+  This data model is an adaptation of the EU proof of vaccination version 1.3.0. More info at [https://ec.europa.eu/health/sites/default/files/ehealth/docs/vaccination-proof_interoperability-guidelines_en.pdf](https://ec.europa.eu/health/sites/default/files/ehealth/docs/vaccination-proof_interoperability-guidelines_en.pdf). The adaptation adds two mandatory attributes to be compabtible with NGSI standard, id and type.
+notesMiddle:
+
+notesFooter:
+
+notesReadme:
+  This data model is an adaptation of the EU proof of vaccination version 1.3.0. More info at [https://ec.europa.eu/health/sites/default/files/ehealth/docs/vaccination-proof_interoperability-guidelines_en.pdf](https://ec.europa.eu/health/sites/default/files/ehealth/docs/vaccination-proof_interoperability-guidelines_en.pdf). The adaptation adds two mandatory attributes to be compabtible with NGSI standard, id and type.
