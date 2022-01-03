@@ -1,15 +1,15 @@
-Entity: VaccinationCertificate  
-==============================  
-[Open License](https://github.com/smart-data-models//dataModel.COVID19/blob/master/VaccinationCertificate/LICENSE.md)  
+エンティティワクチン接種証明書  
+===============  
+[オープンライセンス](https://github.com/smart-data-models//dataModel.COVID19/blob/master/VaccinationCertificate/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Global description: **Description of a COVID-19 Vaccination Certificate.**  
+グローバルな記述です。**COVID-19 ワクチン接種証明書の説明。  
 
-## List of properties  
+## プロパティのリスト  
 
-- `address`: The mailing address  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `credentialSubject`: Vaccine, Vaccine Event and recipient object  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `expirationDate`: Date and time of expiry  - `id`: Unique identifier of the entity  - `issuanceDate`: Date and time of issuance  - `issuer`: Identity of the issuer  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NSGI Entity Type. it has to be VaccinationCertificate    
-Required properties  
-- `id`  - `type`  ## Data Model description of properties  
-Sorted alphabetically (click for details)  
+- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `credentialSubject`: ワクチン、ワクチンイベント、受信者オブジェクト  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `expirationDate`: 期限切れの日付と時刻  - `id`: エンティティのユニークな識別子  - `issuanceDate`: 発行日時が決まっている  - `issuer`: 発行者のアイデンティティ  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NSGI Entity Type. VaccinationCertificateである必要があります。    
+必須項目  
+- `id`  - `type`  ## データモデルによるプロパティの記述  
+アルファベット順（クリックすると詳細が表示されます  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 VaccinationCertificate:    
@@ -387,9 +387,9 @@ VaccinationCertificate:
   type: object    
 ```  
 </details>    
-## Example payloads    
-#### VaccinationCertificate NGSI-v2 key-values Example    
-Here is an example of a VaccinationCertificate in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
+## ペイロードの例  
+#### VaccinationCertificate NGSI-v2 key-values の例。  
+VaccinationCertificateをkey-valuesとしてJSON-LD形式で出力した例です。これは`options=keyValues`を使った場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "dataModel.id.VINF:36225393",  
@@ -422,8 +422,8 @@ VaccinationCertificate:
   }  
 }  
 ```  
-#### VaccinationCertificate NGSI-v2 normalized Example    
-Here is an example of a VaccinationCertificate in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
+#### VaccinationCertificate NGSI-v2 正規化例  
+ここでは、正規化されたJSON-LD形式のVaccinationCertificateの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:dataModel:id:VINF:36225393",  
@@ -476,8 +476,8 @@ VaccinationCertificate:
   }  
 }  
 ```  
-#### VaccinationCertificate NGSI-LD key-values Example    
-Here is an example of a VaccinationCertificate in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+#### VaccinationCertificate NGSI-LD key-values の例。  
+VaccinationCertificateをkey-valuesとしてJSON-LD形式で出力した例です。これは`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
     "id":"urn:ngsi-ld:dataModel:id:VINF:36225393",  
@@ -528,8 +528,8 @@ VaccinationCertificate:
     ]  
 }  
 ```  
-#### VaccinationCertificate NGSI-LD normalized Example    
-Here is an example of a VaccinationCertificate in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+#### VaccinationCertificate NGSI-LDの正規化例  
+ここでは、正規化されたJSON-LD形式のVaccinationCertificateの例を示します。これは、オプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:dataModel:id:VINF:36225393",  
@@ -648,4 +648,4 @@ VaccinationCertificate:
   ]  
 }  
 ```  
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
