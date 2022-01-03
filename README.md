@@ -3,6 +3,8 @@
 ### List of data models
 
 The following entity types are available:
+- [EUProofOfVaccination](https://github.com/smart-data-models/dataModel.COVID19/blob/master/EUProofOfVaccination/README.md). EU Digital Covid Certificate version 1.3.0 adapted to work with NGSI standard by Smart Data Models Program
+
 - [VaccinationCertificate](https://github.com/smart-data-models/dataModel.COVID19/blob/master/VaccinationCertificate/README.md). Description of a COVID-19 Vaccination Certificate.
 
 
