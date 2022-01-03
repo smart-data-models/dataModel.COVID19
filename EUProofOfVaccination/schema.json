@@ -3,7 +3,7 @@
   "$id": "https://smart-data-models.github.io/dataModel.COVID19/EUProofOfVaccination/schema.json",
   "title": "EU DCC",
   "description": "EU Digital Covid Certificate version 1.3.0 adapted to work with NGSI standard by Smart Data Models Program",
-  "schemaVersion": "0.0.1",
+  "$schemaVersion": "0.0.1",
   "modelTags": "EU, COVID19",
   "type": "object",
   "derivedFrom": "https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/release/1.3.0/DCC.combined-schema.json",
