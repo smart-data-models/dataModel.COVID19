@@ -1,58 +1,58 @@
 description: This is a compilation list of all CONTRIBUTORS across different objects (data models) alphabetically ordered. All fields are non mandatory
 contributors:
--
- name: Ryan
- surname: Barret
- mail: github@seldonplan.com
- organization:
- project:
- comments: contributor to the original proof of vaccination certificate
--
- name: Meinte
- surname: Boersma
- mail: meinte.boersma@gmail.com
- organization:
- project:
- comments: contributor to the original proof of vaccination certificate
--
- name: Hynek
- surname: Kružík
- mail: kruzik@gnomon.cz
- organization:
- project:
- comments: contributor to the original proof of vaccination certificate
--
- name: Martin
- surname: Lindström
- mail: martin.lindstrom(at)litsec.se
- organization:
- project:
- comments: contributor to the original proof of vaccination certificate
--
- name: Har Preet
- surname: Singh
- mail: harpreet.singh@fiware.org
- organization: FIWARE Foundation
- project: 
- comments:
--
- name: Jakob
- surname: Schlyter
- mail: jakob@kirei.se
- organization:
- project:
- comments: contributor to the original proof of vaccination certificate
--
- name:  Dirk-Willem
- surname: van Gulik
- mail: dirkx(at)webweaving(punto)org
- organization:
- project:
- comments: contributor to the original proof of vaccination certificate
--
- name: Gaby
- surname: Whitehead
- mail: gaby.whitehead@radboudumc.nl
- organization:
- project:
- comments:  contributor to the original proof of vaccination certificate
+- name: Ryan
+  surname: Barret
+  mail: github@seldonplan.com
+  organization: 
+  project: 
+  comments: contributor to the original proof of vaccination certificate
+  year: 2022
+- name: Meinte
+  surname: Boersma
+  mail: meinte.boersma@gmail.com
+  organization: 
+  project: 
+  comments: contributor to the original proof of vaccination certificate
+  year: 2022
+- name: Hynek
+  surname: "Kru\u017E\xEDk"
+  mail: kruzik@gnomon.cz
+  organization: 
+  project: 
+  comments: contributor to the original proof of vaccination certificate
+  year: 2022
+- name: Martin
+  surname: "Lindstr\xF6m"
+  mail: martin.lindstrom(at)litsec.se
+  organization: 
+  project: 
+  comments: contributor to the original proof of vaccination certificate
+  year: 2022
+- name: Har Preet
+  surname: Singh
+  mail: harpreet.singh@fiware.org
+  organization: FIWARE Foundation
+  project: 
+  comments: 
+  year: 2022
+- name: Jakob
+  surname: Schlyter
+  mail: jakob@kirei.se
+  organization: 
+  project: 
+  comments: contributor to the original proof of vaccination certificate
+  year: 2022
+- name: Dirk-Willem
+  surname: van Gulik
+  mail: dirkx(at)webweaving(punto)org
+  organization: 
+  project: 
+  comments: contributor to the original proof of vaccination certificate
+  year: 2022
+- name: Gaby
+  surname: Whitehead
+  mail: gaby.whitehead@radboudumc.nl
+  organization: 
+  project: 
+  comments: contributor to the original proof of vaccination certificate
+  year: 2022
