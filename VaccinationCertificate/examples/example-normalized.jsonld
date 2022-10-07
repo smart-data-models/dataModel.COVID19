@@ -110,5 +110,7 @@
         "type": "Relationship",
         "object": "urn:ngsi-ld:dataModel:id:VINF:12233123"
     },
-    "@context": []
+    "@context": [
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.COVID19/master/context.jsonld"
+    ]
 }
