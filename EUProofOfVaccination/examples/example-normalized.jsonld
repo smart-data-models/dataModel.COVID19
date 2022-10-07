@@ -38,6 +38,7 @@
         "value": "1.3.0"
     },
     "@context": [
-        "https://smart-data-models.github.io/dataModel.COVID19/context.jsonld"
+        "https://smart-data-models.github.io/dataModel.COVID19/context.jsonld",
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.COVID19/master/context.jsonld"
     ]
 }
