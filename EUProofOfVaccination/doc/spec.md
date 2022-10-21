@@ -1,17 +1,32 @@
-Entity: EUProofOfVaccination  
-============================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entity: EUProofOfVaccination  
+============================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Open License](https://github.com/smart-data-models//dataModel.COVID19/blob/master/EUProofOfVaccination/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Global description: **EU Digital Covid Certificate version 1.3.0 adapted to work with NGSI standard by Smart Data Models Program**  
+version:   
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## List of properties  
 
-- `dob`: Date of birth. Date of Birth of the person addressed in the DCC. ISO 8601 date format restricted to range 1900-2099 or empty  - `id`: Unique identifier of the entity  - `nam`: Surname(s), forename(s) - in that order  - `r`: Recovery Group  - `t`: Test Group  - `type`: NGSI entity type. It has to be EUProofOfVaccination  - `v`: Vaccination Group  - `ver`: Schema version. Version of the schema, according to Semantic versioning (ISO, https://semver.org/ version 2.0.0 or newer)    
+<sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
+- `dob[string]`: Date of birth. Date of Birth of the person addressed in the DCC. ISO 8601 date format restricted to range 1900-2099 or empty  - `id[*]`: Unique identifier of the entity  - `nam[object]`: Surname(s), forename(s) - in that order  - `r[array]`: Recovery Group  - `t[array]`: Test Group  - `type[string]`: NGSI entity type. It has to be EUProofOfVaccination  - `v[array]`: Vaccination Group  - `ver[string]`: Schema version. Version of the schema, according to Semantic versioning (ISO, https://semver.org/ version 2.0.0 or newer)  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Required properties  
-- `id`  - `type`    
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 This data model is an adaptation of the EU proof of vaccination version 1.3.0. More info at [https://ec.europa.eu/health/sites/default/files/ehealth/docs/vaccination-proof_interoperability-guidelines_en.pdf](https://ec.europa.eu/health/sites/default/files/ehealth/docs/vaccination-proof_interoperability-guidelines_en.pdf). The adaptation adds two mandatory attributes to be compabtible with NGSI standard, id and type.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Data Model description of properties  
 Sorted alphabetically (click for details)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 EUProofOfVaccination:    
@@ -228,9 +243,14 @@ EUProofOfVaccination:
   x-version: ""    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Example payloads    
 #### EUProofOfVaccination NGSI-v2 key-values Example    
 Here is an example of a EUProofOfVaccination in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
 "id": "urn:ngsi-ld:1234:ABCD",  
@@ -259,8 +279,10 @@ EUProofOfVaccination:
   ]  
 }  
 ```  
+</details>  
 #### EUProofOfVaccination NGSI-v2 normalized Example    
 Here is an example of a EUProofOfVaccination in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:1234:ABCD",  
@@ -298,84 +320,98 @@ EUProofOfVaccination:
   }  
 }  
 ```  
+</details>  
 #### EUProofOfVaccination NGSI-LD key-values Example    
 Here is an example of a EUProofOfVaccination in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:1234:ABCD",  
-  "type": "EUProofOfVaccination",  
-  "ver": "1.3.0",  
-  "nam": {  
-    "fn": "Smith-Jones",  
-    "fnt": "SMITH<JONES",  
-    "gn": "Charles Edward",  
-    "gnt": "CHARLES<EDWARD"  
-  },  
-  "dob": "1964-01-01",  
-  "v": [  
-    {  
-      "tg": "840539006",  
-      "vp": "1119349007",  
-      "mp": "EU/1/20/1507",  
-      "ma": "ORG-100031184",  
-      "dn": 1,  
-      "sd": 2,  
-      "dt": "2021-06-11",  
-      "co": "NL",  
-      "is": "Ministry of Health Welfare and Sport",  
-      "ci": "URN:UVCI:01:NL:DADFCC47C7334E45A906DB12FD859FB7#1"  
-    }  
-  ],  
-  "@context": [  
-    "https://smart-data-models.github.io/dataModel.COVID19/context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:1234:ABCD",  
+    "type": "EUProofOfVaccination",  
+    "dob": "1964-01-01",  
+    "nam": {  
+        "fn": "Smith-Jones",  
+        "fnt": "SMITH<JONES",  
+        "gn": "Charles Edward",  
+        "gnt": "CHARLES<EDWARD"  
+    },  
+    "v": [  
+        {  
+            "tg": "840539006",  
+            "vp": "1119349007",  
+            "mp": "EU/1/20/1507",  
+            "ma": "ORG-100031184",  
+            "dn": 1,  
+            "sd": 2,  
+            "dt": "2021-06-11",  
+            "co": "NL",  
+            "is": "Ministry of Health Welfare and Sport",  
+            "ci": "URN:UVCI:01:NL:DADFCC47C7334E45A906DB12FD859FB7#1"  
+        }  
+    ],  
+    "ver": "1.3.0",  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.COVID19/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.COVID19/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details>  
 #### EUProofOfVaccination NGSI-LD normalized Example    
 Here is an example of a EUProofOfVaccination in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:1234:ABCD",  
-  "type": "EUProofOfVaccination",  
-  "ver": {  
-    "type": "Property",  
-    "value": "1.3.0"  
-  },  
-  "nam": {  
-    "type": "Property",  
-    "value": {  
-      "fn": "Smith-Jones",  
-      "fnt": "SMITH<JONES",  
-      "gn": "Charles Edward",  
-      "gnt": "CHARLES<EDWARD"  
-    }  
-  },  
-  "dob": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "date-time",  
-      "@value": "1964-01-01"  
-    }  
-  },  
-  "t": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "tg": "840539006",  
-        "tt": "LP6464-4",  
-        "nm": "ELITechGroup, SARS-CoV-2 ELITe MGBÂ® Kit",  
-        "sc": "2021-06-11T17:30:00Z",  
-        "tr": "260415000",  
-        "tc": "Example Test Corp, Big City",  
-        "co": "NL",  
-        "is": "Ministry of Health Welfare and Sport",  
-        "ci": "URN:UVCI:01:NL:DADFCC47C7334E45A906DB12FD859FB7#1"  
-      }  
+    "id": "urn:ngsi-ld:1234:ABCD",  
+    "type": "EUProofOfVaccination",  
+    "dob": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "date-time",  
+            "@value": "1964-01-01"  
+        }  
+    },  
+    "nam": {  
+        "type": "Property",  
+        "value": {  
+            "fn": "Smith-Jones",  
+            "fnt": "SMITH<JONES",  
+            "gn": "Charles Edward",  
+            "gnt": "CHARLES<EDWARD"  
+        }  
+    },  
+    "t": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "tg": "840539006",  
+                "tt": "LP6464-4",  
+                "nm": "ELITechGroup, SARS-CoV-2 ELITe MGB\u00ae Kit",  
+                "sc": "2021-06-11T17:30:00Z",  
+                "tr": "260415000",  
+                "tc": "Example Test Corp, Big City",  
+                "co": "NL",  
+                "is": "Ministry of Health Welfare and Sport",  
+                "ci": "URN:UVCI:01:NL:DADFCC47C7334E45A906DB12FD859FB7#1"  
+            }  
+        ]  
+    },  
+    "ver": {  
+        "type": "Property",  
+        "value": "1.3.0"  
+    },  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.COVID19/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.COVID19/master/context.jsonld"  
     ]  
-  },  
-  "@context": [  
-    "https://smart-data-models.github.io/dataModel.COVID19/context.jsonld"  
-  ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
