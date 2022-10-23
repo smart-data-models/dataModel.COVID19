@@ -1,17 +1,32 @@
-エンティティEUProofOfVaccination  
-==========================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティEUProofOfVaccination  
+==========================<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.COVID19/blob/master/EUProofOfVaccination/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述です。**Smart Data Models ProgramによるNGSI規格に対応したEUデジタルCovid証明書バージョン1.3.0**。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+グローバルな説明**EUデジタルCovid証明書バージョン1.3.0は、Smart Data Models ProgramによってNGSI標準と連動するよう修正されました。  
+のバージョンです。  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `dob`: 生年月日を記載しています。DCCに記載されている人物の生年月日。ISO 8601の日付フォーマットが1900～2099の範囲に制限されているか、空になっている  - `id`: エンティティのユニークな識別子  - `nam`: 苗字、名前の順です。  - `r`: リカバリーグループ  - `t`: テストグループ  - `type`: NGSIエンティティタイプ。EUProofOfVaccinationでなければならない。  - `v`: ワクチン接種グループ  - `ver`: スキーマのバージョン。セマンティックバージョニングに従ったスキーマのバージョン（ISO, https://semver.org/ バージョン2.0.0またはそれ以降）。    
-必須項目  
-- `id`  - `type`    
-このデータモデルは、EUのProof of vaccination version 1.3.0をアレンジしたものです。詳細は[https://ec.europa.eu/health/sites/default/files/ehealth/docs/vaccination-proof_interoperability-guidelines_en.pdf](https://ec.europa.eu/health/sites/default/files/ehealth/docs/vaccination-proof_interoperability-guidelines_en.pdf)を参照してください。このデータモデルでは、NGSI規格に準拠するために、idとtypeの2つの必須属性を追加しています。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `dob[string]`: 生年月日をご記入ください。DCCで指定された人物の生年月日。ISO 8601の日付形式は、範囲1900-2099に制限されているか、または空です。  - `id[*]`: エンティティの一意な識別子  - `nam[object]`: 名字、名前の順でご記入ください。  - `r[array]`: リカバリーグループ  - `t[array]`: テストグループ  - `type[string]`: NGSIエンティティタイプ。これは EUProofOfVaccination でなければならない。  - `v[array]`: ワクチン接種グループ  - `ver[string]`: スキーマのバージョン。Semantic versioning (ISO, https://semver.org/ version 2.0.0 or newer)に従ったスキーマのバージョン。  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+必要なプロパティ  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+このデータモデルは、EUのproof of vaccination version 1.3.0をアレンジしたものです。詳しくは[https://ec.europa.eu/health/sites/default/files/ehealth/docs/vaccination-proof_interoperability-guidelines_en.pdf](https://ec.europa.eu/health/sites/default/files/ehealth/docs/vaccination-proof_interoperability-guidelines_en.pdf)をご覧ください。このデータモデルでは、NGSI標準に準拠するために、idとtypeという2つの必須属性が追加されています。  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 EUProofOfVaccination:    
@@ -228,9 +243,14 @@ EUProofOfVaccination:
   x-version: ""    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
-#### EUProofOfVaccination NGSI-v2 キー・バリュー例  
-EUProofOfVaccinationをkey-valuesとしてJSON-LD形式で出力した例です。これは、`options=keyValues`を使用した場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### EUProofOfVaccination NGSI-v2 key-value の例。  
+以下は、EUProofOfVaccinationをJSON-LD形式でkey-valuesにした例である。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
 "id": "urn:ngsi-ld:1234:ABCD",  
@@ -259,8 +279,10 @@ EUProofOfVaccination:
   ]  
 }  
 ```  
+</details>  
 #### EUProofOfVaccination NGSI-v2 正規化例  
-JSON-LD形式のEUProofOfVaccinationを正規化した例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、EUProofOfVaccination を JSON-LD 形式で正規化した例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:1234:ABCD",  
@@ -298,84 +320,98 @@ EUProofOfVaccination:
   }  
 }  
 ```  
-#### EUProofOfVaccination NGSI-LDのキーバリュー例  
-EUProofOfVaccinationをkey-valuesとしてJSON-LD形式で出力した例です。これは、`options=keyValues`を使うとNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### EUProofOfVaccination NGSI-LD key-value の例  
+ここでは、EUProofOfVaccinationをJSON-LD形式でkey-valuesにした例を示します。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータが返されます。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:1234:ABCD",  
-  "type": "EUProofOfVaccination",  
-  "ver": "1.3.0",  
-  "nam": {  
-    "fn": "Smith-Jones",  
-    "fnt": "SMITH<JONES",  
-    "gn": "Charles Edward",  
-    "gnt": "CHARLES<EDWARD"  
-  },  
-  "dob": "1964-01-01",  
-  "v": [  
-    {  
-      "tg": "840539006",  
-      "vp": "1119349007",  
-      "mp": "EU/1/20/1507",  
-      "ma": "ORG-100031184",  
-      "dn": 1,  
-      "sd": 2,  
-      "dt": "2021-06-11",  
-      "co": "NL",  
-      "is": "Ministry of Health Welfare and Sport",  
-      "ci": "URN:UVCI:01:NL:DADFCC47C7334E45A906DB12FD859FB7#1"  
-    }  
-  ],  
-  "@context": [  
-    "https://smart-data-models.github.io/dataModel.COVID19/context.jsonld"  
-  ]  
-}  
-```  
-#### EUProofOfVaccination NGSI-LD 正規化例  
-JSON-LD形式のEUProofOfVaccinationを正規化した例を示します。これは、オプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
-```json  
-{  
-  "id": "urn:ngsi-ld:1234:ABCD",  
-  "type": "EUProofOfVaccination",  
-  "ver": {  
-    "type": "Property",  
-    "value": "1.3.0"  
-  },  
-  "nam": {  
-    "type": "Property",  
-    "value": {  
-      "fn": "Smith-Jones",  
-      "fnt": "SMITH<JONES",  
-      "gn": "Charles Edward",  
-      "gnt": "CHARLES<EDWARD"  
-    }  
-  },  
-  "dob": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "date-time",  
-      "@value": "1964-01-01"  
-    }  
-  },  
-  "t": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "tg": "840539006",  
-        "tt": "LP6464-4",  
-        "nm": "ELITechGroup, SARS-CoV-2 ELITe MGBÂ® Kit",  
-        "sc": "2021-06-11T17:30:00Z",  
-        "tr": "260415000",  
-        "tc": "Example Test Corp, Big City",  
-        "co": "NL",  
-        "is": "Ministry of Health Welfare and Sport",  
-        "ci": "URN:UVCI:01:NL:DADFCC47C7334E45A906DB12FD859FB7#1"  
-      }  
+    "id": "urn:ngsi-ld:1234:ABCD",  
+    "type": "EUProofOfVaccination",  
+    "dob": "1964-01-01",  
+    "nam": {  
+        "fn": "Smith-Jones",  
+        "fnt": "SMITH<JONES",  
+        "gn": "Charles Edward",  
+        "gnt": "CHARLES<EDWARD"  
+    },  
+    "v": [  
+        {  
+            "tg": "840539006",  
+            "vp": "1119349007",  
+            "mp": "EU/1/20/1507",  
+            "ma": "ORG-100031184",  
+            "dn": 1,  
+            "sd": 2,  
+            "dt": "2021-06-11",  
+            "co": "NL",  
+            "is": "Ministry of Health Welfare and Sport",  
+            "ci": "URN:UVCI:01:NL:DADFCC47C7334E45A906DB12FD859FB7#1"  
+        }  
+    ],  
+    "ver": "1.3.0",  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.COVID19/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.COVID19/master/context.jsonld"  
     ]  
-  },  
-  "@context": [  
-    "https://smart-data-models.github.io/dataModel.COVID19/context.jsonld"  
-  ]  
 }  
 ```  
+</details>  
+#### EUProofOfVaccination NGSI-LD 正規化例  
+以下は、EUProofOfVaccination を JSON-LD 形式で正規化した例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+    "id": "urn:ngsi-ld:1234:ABCD",  
+    "type": "EUProofOfVaccination",  
+    "dob": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "date-time",  
+            "@value": "1964-01-01"  
+        }  
+    },  
+    "nam": {  
+        "type": "Property",  
+        "value": {  
+            "fn": "Smith-Jones",  
+            "fnt": "SMITH<JONES",  
+            "gn": "Charles Edward",  
+            "gnt": "CHARLES<EDWARD"  
+        }  
+    },  
+    "t": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "tg": "840539006",  
+                "tt": "LP6464-4",  
+                "nm": "ELITechGroup, SARS-CoV-2 ELITe MGB\u00ae Kit",  
+                "sc": "2021-06-11T17:30:00Z",  
+                "tr": "260415000",  
+                "tc": "Example Test Corp, Big City",  
+                "co": "NL",  
+                "is": "Ministry of Health Welfare and Sport",  
+                "ci": "URN:UVCI:01:NL:DADFCC47C7334E45A906DB12FD859FB7#1"  
+            }  
+        ]  
+    },  
+    "ver": {  
+        "type": "Property",  
+        "value": "1.3.0"  
+    },  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.COVID19/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.COVID19/master/context.jsonld"  
+    ]  
+}  
+```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
