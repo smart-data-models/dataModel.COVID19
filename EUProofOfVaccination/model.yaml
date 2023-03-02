@@ -1,30 +1,30 @@
 EUProofOfVaccination:
-  description: 'EU Digital Covid Certificate version 1.3.0 adapted to work with NGSI standard by Smart Data Models Program'
+  description: EU Digital Covid Certificate version 1.3.0 adapted to work with NGSI standard by Smart Data Models Program
   properties:
     dob:
-      description: 'Date of birth. Date of Birth of the person addressed in the DCC. ISO 8601 date format restricted to range 1900-2099 or empty'
+      description: Date of birth. Date of Birth of the person addressed in the DCC. ISO 8601 date format restricted to range 1900-2099 or empty
       pattern: ^((19|20)\d\d(-\d\d){0,2}){0,1}$
       type: string
       x-ngsi:
         type: Property
     id:
       anyOf:
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: 'Property. Identifier format of any NGSI entity'
+        - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: 'Unique identifier of the entity'
+      description: Unique identifier of the entity
       x-ngsi:
         type: Property
     nam:
       description: 'Surname(s), forename(s) - in that order'
       properties:
         fn:
-          description: 'Property. Surname. The surname or primary name(s) of the person addressed in the certificate'
+          description: Property. Surname. The surname or primary name(s) of the person addressed in the certificate
           maxLength: 80
           type: string
         fnt:
@@ -33,7 +33,7 @@ EUProofOfVaccination:
           pattern: ^[A-Z<]*$
           type: string
         gn:
-          description: 'Property. Forename. The forename(s) of the person addressed in the certificate'
+          description: Property. Forename. The forename(s) of the person addressed in the certificate
           maxLength: 80
           type: string
         gnt:
@@ -45,9 +45,9 @@ EUProofOfVaccination:
       x-ngsi:
         type: Property
     r:
-      description: 'Recovery Group'
+      description: Recovery Group
       items:
-        description: 'Recovery Entry'
+        description: Recovery Entry
         properties:
           ci:
             description: 'Property. Unique Certificate Identifier: UVCI. Certificate Identifier, format as per UVCI: Annex 2 in  https://ec.europa.eu/health/sites/health/files/ehealth/docs/vaccination-proof_interoperability-guidelines_en.pdf'
@@ -66,11 +66,11 @@ EUProofOfVaccination:
             format: date
             type: string
           fr:
-            description: 'ISO 8601 complete date of first positive NAA test result'
+            description: ISO 8601 complete date of first positive NAA test result
             format: date
             type: string
           is:
-            description: 'Certificate Issuer'
+            description: Certificate Issuer
             maxLength: 80
             type: string
           tg:
@@ -89,9 +89,9 @@ EUProofOfVaccination:
       minItems: 1
       type: array
     t:
-      description: 'Test Group'
+      description: Test Group
       items:
-        description: 'Test Entry'
+        description: Test Entry
         properties:
           ci:
             description: 'Property. Unique Certificate Identifier: UVCI. Certificate Identifier, format as per UVCI: Annex 2 in  https://ec.europa.eu/health/sites/health/files/ehealth/docs/vaccination-proof_interoperability-guidelines_en.pdf'
@@ -102,22 +102,22 @@ EUProofOfVaccination:
             pattern: "[A-Z]{1,10}"
             type: string
           is:
-            description: 'Certificate Issuer'
+            description: Certificate Issuer
             maxLength: 80
             type: string
           ma:
             description: 'Property. RAT Test name and manufacturer. EU eHealthNetwork: Value Sets for Digital Covid Certificates. version 1.0, 2021-04-16, section 2.4. The values are ORG-100001699 for AstraZeneca AB, ORG-100030215 for Biontech Manufacturing GmbH, ORG-100001417 for Janssen-Cilag International, ORG-100031184 for Moderna Biotech Spain S.L., ORG-100006270 for Curevac AG, ORG-100013793 for CanSino Biologics, ORG-100020693 for China Sinopharm International Corp. - Beijing location, ORG-100010771 for Sinopharm Weiqida Europe Pharmaceutical s.r.o. - Prague location, ORG-100024420 for Sinopharm Zhijun (Shenzhen) Pharmaceutical Co. Ltd. - Shenzhen location, ORG-100032020 for Novavax CZ AS, Gamaleya-Research-Institute for Gamaleya Research Institute, Vector-Institute for Vector Institute, Sinovac-Biotech for Sinovac Biotech, Bharat-Biotech for Bharat Biotech. More info at https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/release/1.3.0/valuesets/vaccine-mah-manf.json'
             type: string
           nm:
-            description: 'NAA Test Name'
+            description: NAA Test Name
             maxLength: 80
             type: string
           sc:
-            description: 'Date/Time of Sample Collection'
+            description: Date/Time of Sample Collection
             format: date-time
             type: string
           tc:
-            description: 'Testing Centre'
+            description: Testing Centre
             maxLength: 80
             type: string
           tg:
@@ -144,14 +144,14 @@ EUProofOfVaccination:
       x-ngsi:
         type: Property
     type:
-      description: 'NGSI entity type. It has to be EUProofOfVaccination'
+      description: NGSI entity type. It has to be EUProofOfVaccination
       enum:
         - EUProofOfVaccination
       type: string
       x-ngsi:
         type: Property
     v:
-      description: 'Vaccination Group'
+      description: Vaccination Group
       items:
         properties:
           ci:
@@ -171,7 +171,7 @@ EUProofOfVaccination:
             format: date
             type: string
           is:
-            description: 'Certificate Issuer'
+            description: Certificate Issuer
             maxLength: 80
             type: string
           ma:
@@ -205,8 +205,8 @@ EUProofOfVaccination:
     - type
   type: object
   x-derived-from: https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/release/1.3.0/DCC.combined-schema.json
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.COVID19/blob/master/EUProofOfVaccination/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.COVID19/EUProofOfVaccination/schema.json
   x-model-tags: 'EU, COVID19'
-  x-version: ""
+  x-version: 0.0.1
