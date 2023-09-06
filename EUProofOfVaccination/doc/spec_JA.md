@@ -3,91 +3,110 @@
 エンティティEUProofOfVaccination  
 ==========================<!-- /10-Header -->  
 <!-- 15-License -->  
-[オープンライセンス](https://github.com/smart-data-models//dataModel.COVID19/blob/master/EUProofOfVaccination/LICENSE.md)  
-[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+[オープン・ライセンス](https://github.com/smart-data-models//dataModel.COVID19/blob/master/EUProofOfVaccination/LICENSE.md)  
+[文書は自動的に生成される](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-グローバルな説明**EUデジタルCovid証明書バージョン1.3.0は、Smart Data Models ProgramによってNGSI標準と連動するよう修正されました。  
-のバージョンです。  
+グローバルな説明**EUデジタルCovid証明書バージョン1.3.0は、スマート・データ・モデル・プログラムによるNGSI標準に適合している。  
+バージョン: 0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
-## プロパティ一覧  
+## プロパティのリスト  
 
-<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
-- `dob[string]`: 生年月日をご記入ください。DCCで指定された人物の生年月日。ISO 8601の日付形式は、範囲1900-2099に制限されているか、または空です。  - `id[*]`: エンティティの一意な識別子  - `nam[object]`: 名字、名前の順でご記入ください。  - `r[array]`: リカバリーグループ  - `t[array]`: テストグループ  - `type[string]`: NGSIエンティティタイプ。これは EUProofOfVaccination でなければならない。  - `v[array]`: ワクチン接種グループ  - `ver[string]`: スキーマのバージョン。Semantic versioning (ISO, https://semver.org/ version 2.0.0 or newer)に従ったスキーマのバージョン。  <!-- /30-PropertiesList -->  
+<sup><sub>[*] 属性に型がない場合は、複数の型があるか、異なるフォーマット/パターンがある可能性があるためです</sub></sup>。  
+- `dob[string]`: 生年月日DCCで指定された人物の生年月日。ISO 8601の日付書式で、1900-2099の範囲に制限されているか、または空です。  - `id[*]`: エンティティの一意識別子  - `nam[object]`: 苗字、名前の順  	- `fn[string]`: 姓証明書に記載された人物の姓または名。    
+	- `fnt[string]`: 標準化された姓。ICAO9303に翻字された姓。    
+	- `gn[string]`: 姓証明書に記載された人物の姓名。    
+- `r[array]`: 回復グループ  - `t[array]`: テストグループ  - `type[string]`: NGSIエンティティタイプ。これは EUProofOfVaccination でなければならない。  - `v[array]`: ワクチン接種グループ  - `ver[string]`: スキーマのバージョン。セマンティック・バージョニング（ISO、https://semver.org/ バージョン2.0.0以降）に従ったスキーマのバージョン。  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
-必要なプロパティ  
+必須プロパティ  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-このデータモデルは、EUのproof of vaccination version 1.3.0をアレンジしたものです。詳しくは[https://ec.europa.eu/health/sites/default/files/ehealth/docs/vaccination-proof_interoperability-guidelines_en.pdf](https://ec.europa.eu/health/sites/default/files/ehealth/docs/vaccination-proof_interoperability-guidelines_en.pdf)をご覧ください。このデータモデルでは、NGSI標準に準拠するために、idとtypeという2つの必須属性が追加されています。  
+このデータ・モデルはEUの予防接種証明バージョン1.3.0を適応したものである。詳細は[https://ec.europa.eu/health/sites/default/files/ehealth/docs/vaccination-proof_interoperability-guidelines_en.pdf](https://ec.europa.eu/health/sites/default/files/ehealth/docs/vaccination-proof_interoperability-guidelines_en.pdf)を参照。この適応では、NGSI標準と互換性を持たせるために、idとtypeという2つの必須属性を追加している。  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
 ## プロパティのデータモデル記述  
-アルファベット順に並びます（クリックで詳細へ）  
+アルファベット順（クリックで詳細表示）  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 EUProofOfVaccination:    
-  description: 'EU Digital Covid Certificate version 1.3.0 adapted to work with NGSI standard by Smart Data Models Program'    
+  description: EU Digital Covid Certificate version 1.3.0 adapted to work with NGSI standard by Smart Data Models Program    
   properties:    
     dob:    
-      description: 'Date of birth. Date of Birth of the person addressed in the DCC. ISO 8601 date format restricted to range 1900-2099 or empty'    
+      description: Date of birth. Date of Birth of the person addressed in the DCC. ISO 8601 date format restricted to range 1900-2099 or empty    
       pattern: ^((19|20)\d\d(-\d\d){0,2}){0,1}$    
       type: string    
       x-ngsi:    
         type: Property    
     id:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     nam:    
       description: 'Surname(s), forename(s) - in that order'    
       properties:    
         fn:    
-          description: 'Property. Surname. The surname or primary name(s) of the person addressed in the certificate'    
+          description: Surname. The surname or primary name(s) of the person addressed in the certificate    
           maxLength: 80    
           type: string    
+          x-ngsi:    
+            type: Property    
         fnt:    
-          description: 'Property. Standardised surname. The surname(s) of the person, transliterated ICAO 9303'    
+          description: 'Standardised surname. The surname(s) of the person, transliterated ICAO 9303'    
           maxLength: 80    
           pattern: ^[A-Z<]*$    
           type: string    
+          x-ngsi:    
+            type: Property    
         gn:    
-          description: 'Property. Forename. The forename(s) of the person addressed in the certificate'    
+          description: Forename. The forename(s) of the person addressed in the certificate    
           maxLength: 80    
           type: string    
+          x-ngsi:    
+            type: Property    
         gnt:    
-          description: 'Property. Standardised forename. The forename(s) of the person, transliterated ICAO 9303'    
+          description: 'Standardised forename. The forename(s) of the person, transliterated ICAO 9303'    
           maxLength: 80    
           pattern: ^[A-Z<]*$    
           type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         type: Property    
     r:    
-      description: 'Recovery Group'    
+      description: Recovery Group    
       items:    
-        description: 'Recovery Entry'    
+        description: Recovery Entry    
         properties:    
           ci:    
-            description: 'Property. Unique Certificate Identifier: UVCI. Certificate Identifier, format as per UVCI: Annex 2 in  https://ec.europa.eu/health/sites/health/files/ehealth/docs/vaccination-proof_interoperability-guidelines_en.pdf'    
+            description: 'Unique Certificate Identifier: UVCI. Certificate Identifier, format as per UVCI: Annex 2 in  https://ec.europa.eu/health/sites/health/files/ehealth/docs/vaccination-proof_interoperability-guidelines_en.pdf'    
             maxLength: 80    
             type: string    
+            x-ngsi:    
+              type: Property    
           co:    
-            description: 'Property. Country of Vaccination / Test, ISO 3166 alpha-2 where possible'    
+            description: 'Country of Vaccination / Test, ISO 3166 alpha-2 where possible'    
             pattern: "[A-Z]{1,10}"    
             type: string    
+            x-ngsi:    
+              type: Property    
           df:    
             description: 'ISO 8601 complete date: Certificate Valid From'    
             format: date    
@@ -97,16 +116,18 @@ EUProofOfVaccination:
             format: date    
             type: string    
           fr:    
-            description: 'ISO 8601 complete date of first positive NAA test result'    
+            description: ISO 8601 complete date of first positive NAA test result    
             format: date    
             type: string    
           is:    
-            description: 'Certificate Issuer'    
+            description: Certificate Issuer    
             maxLength: 80    
             type: string    
           tg:    
-            description: 'Property. Disease or agent targeted. EU eHealthNetwork: Value Sets for Digital Covid Certificates. version 1.0, 2021-04-16, section 2.1. For COVID19 the value has to be 840539006. More info in https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/release/1.3.0/valuesets/disease-agent-targeted.json For other values check https://www.snomed.org/snomed-ct/five-step-briefing'    
+            description: 'Disease or agent targeted. EU eHealthNetwork: Value Sets for Digital Covid Certificates. version 1.0, 2021-04-16, section 2.1. For COVID19 the value has to be 840539006. More info in https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/release/1.3.0/valuesets/disease-agent-targeted.json For other values check https://www.snomed.org/snomed-ct/five-step-briefing'    
             type: string    
+            x-ngsi:    
+              type: Property    
         required:    
           - tg    
           - fr    
@@ -120,46 +141,58 @@ EUProofOfVaccination:
       minItems: 1    
       type: array    
     t:    
-      description: 'Test Group'    
+      description: Test Group    
       items:    
-        description: 'Test Entry'    
+        description: Test Entry    
         properties:    
           ci:    
-            description: 'Property. Unique Certificate Identifier: UVCI. Certificate Identifier, format as per UVCI: Annex 2 in  https://ec.europa.eu/health/sites/health/files/ehealth/docs/vaccination-proof_interoperability-guidelines_en.pdf'    
+            description: 'Unique Certificate Identifier: UVCI. Certificate Identifier, format as per UVCI: Annex 2 in  https://ec.europa.eu/health/sites/health/files/ehealth/docs/vaccination-proof_interoperability-guidelines_en.pdf'    
             maxLength: 80    
             type: string    
+            x-ngsi:    
+              type: Property    
           co:    
-            description: 'Property. Country of Test, ISO 3166 alpha-2 where possible'    
+            description: 'Country of Test, ISO 3166 alpha-2 where possible'    
             pattern: "[A-Z]{1,10}"    
             type: string    
+            x-ngsi:    
+              type: Property    
           is:    
-            description: 'Certificate Issuer'    
+            description: Certificate Issuer    
             maxLength: 80    
             type: string    
           ma:    
-            description: 'Property. RAT Test name and manufacturer. EU eHealthNetwork: Value Sets for Digital Covid Certificates. version 1.0, 2021-04-16, section 2.4. The values are ORG-100001699 for AstraZeneca AB, ORG-100030215 for Biontech Manufacturing GmbH, ORG-100001417 for Janssen-Cilag International, ORG-100031184 for Moderna Biotech Spain S.L., ORG-100006270 for Curevac AG, ORG-100013793 for CanSino Biologics, ORG-100020693 for China Sinopharm International Corp. - Beijing location, ORG-100010771 for Sinopharm Weiqida Europe Pharmaceutical s.r.o. - Prague location, ORG-100024420 for Sinopharm Zhijun (Shenzhen) Pharmaceutical Co. Ltd. - Shenzhen location, ORG-100032020 for Novavax CZ AS, Gamaleya-Research-Institute for Gamaleya Research Institute, Vector-Institute for Vector Institute, Sinovac-Biotech for Sinovac Biotech, Bharat-Biotech for Bharat Biotech. More info at https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/release/1.3.0/valuesets/vaccine-mah-manf.json'    
+            description: 'RAT Test name and manufacturer. EU eHealthNetwork: Value Sets for Digital Covid Certificates. version 1.0, 2021-04-16, section 2.4. The values are ORG-100001699 for AstraZeneca AB, ORG-100030215 for Biontech Manufacturing GmbH, ORG-100001417 for Janssen-Cilag International, ORG-100031184 for Moderna Biotech Spain S.L., ORG-100006270 for Curevac AG, ORG-100013793 for CanSino Biologics, ORG-100020693 for China Sinopharm International Corp. - Beijing location, ORG-100010771 for Sinopharm Weiqida Europe Pharmaceutical s.r.o. - Prague location, ORG-100024420 for Sinopharm Zhijun (Shenzhen) Pharmaceutical Co. Ltd. - Shenzhen location, ORG-100032020 for Novavax CZ AS, Gamaleya-Research-Institute for Gamaleya Research Institute, Vector-Institute for Vector Institute, Sinovac-Biotech for Sinovac Biotech, Bharat-Biotech for Bharat Biotech. More info at https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/release/1.3.0/valuesets/vaccine-mah-manf.json'    
             type: string    
+            x-ngsi:    
+              type: Property    
           nm:    
-            description: 'NAA Test Name'    
+            description: NAA Test Name    
             maxLength: 80    
             type: string    
           sc:    
-            description: 'Date/Time of Sample Collection'    
+            description: Date/Time of Sample Collection    
             format: date-time    
             type: string    
           tc:    
-            description: 'Testing Centre'    
+            description: Testing Centre    
             maxLength: 80    
             type: string    
           tg:    
-            description: 'Property. Disease or agent targeted. EU eHealthNetwork: Value Sets for Digital Covid Certificates. version 1.0, 2021-04-16, section 2.1. For COVID19 the value has to be 840539006. More info in https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/release/1.3.0/valuesets/disease-agent-targeted.json For other values check https://www.snomed.org/snomed-ct/five-step-briefing'    
+            description: 'Disease or agent targeted. EU eHealthNetwork: Value Sets for Digital Covid Certificates. version 1.0, 2021-04-16, section 2.1. For COVID19 the value has to be 840539006. More info in https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/release/1.3.0/valuesets/disease-agent-targeted.json For other values check https://www.snomed.org/snomed-ct/five-step-briefing'    
             type: string    
+            x-ngsi:    
+              type: Property    
           tr:    
-            description: 'Property. EU eHealthNetwork: Value Sets for Digital Covid Certificates. version 1.0, 2021-04-16, section 2.9. Test Result. the values for COVID19 are 260415000 for Not detected and 260373001 for Detected. More info at https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/release/1.3.0/valuesets/test-result.json'    
+            description: 'EU eHealthNetwork: Value Sets for Digital Covid Certificates. version 1.0, 2021-04-16, section 2.9. Test Result. the values for COVID19 are 260415000 for Not detected and 260373001 for Detected. More info at https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/release/1.3.0/valuesets/test-result.json'    
             type: string    
+            x-ngsi:    
+              type: Property    
           tt:    
-            description: 'Property. Type of Test. EU eHealthNetwork: Value Sets for Digital Covid Certificates version 1.0, 2021-04-16, section 2.7. The values for COVID19 are LP6464-4 for Nucleic acid amplification with probe detection, LP217198-3 for Rapid immunoassay. '    
+            description: 'Type of Test. EU eHealthNetwork: Value Sets for Digital Covid Certificates version 1.0, 2021-04-16, section 2.7. The values for COVID19 are LP6464-4 for Nucleic acid amplification with probe detection, LP217198-3 for Rapid immunoassay. '    
             type: string    
+            x-ngsi:    
+              type: Property    
         required:    
           - tg    
           - tt    
@@ -175,52 +208,66 @@ EUProofOfVaccination:
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI entity type. It has to be EUProofOfVaccination'    
+      description: NGSI entity type. It has to be EUProofOfVaccination    
       enum:    
         - EUProofOfVaccination    
       type: string    
       x-ngsi:    
         type: Property    
     v:    
-      description: 'Vaccination Group'    
+      description: Vaccination Group    
       items:    
         properties:    
           ci:    
-            description: 'Property. Unique Certificate Identifier: UVCI. Certificate Identifier, format as per UVCI: Annex 2 in  https://ec.europa.eu/health/sites/health/files/ehealth/docs/vaccination-proof_interoperability-guidelines_en.pdf'    
+            description: 'Unique Certificate Identifier: UVCI. Certificate Identifier, format as per UVCI: Annex 2 in  https://ec.europa.eu/health/sites/health/files/ehealth/docs/vaccination-proof_interoperability-guidelines_en.pdf'    
             maxLength: 80    
             type: string    
+            x-ngsi:    
+              type: Property    
           co:    
             description: 'Country of Vaccination / Test, ISO 3166 alpha-2 where possible'    
             pattern: "[A-Z]{1,10}"    
             type: string    
           dn:    
-            description: 'Property. Dose Number. Dose Number / Total doses in Series: positive integer'    
+            description: 'Dose Number. Dose Number / Total doses in Series: positive integer'    
             minimum: 1    
-            type: integer    
+            type: number    
+            x-ngsi:    
+              type: Property    
           dt:    
             description: 'ISO8601 complete date: Date of Vaccination'    
             format: date    
             type: string    
           is:    
-            description: 'Certificate Issuer'    
+            description: Certificate Issuer    
             maxLength: 80    
             type: string    
           ma:    
-            description: 'Property. Marketing Authorization Holder - if no MAH present, then manufacturer. EU eHealthNetwork: Value Sets for Digital Covid Certificates. version 1.0, 2021-04-16, section 2.4. The values are ORG-100001699 for AstraZeneca AB, ORG-100030215 for Biontech Manufacturing GmbH, ORG-100001417 for Janssen-Cilag International, ORG-100031184 for Moderna Biotech Spain S.L., ORG-100006270 for Curevac AG, ORG-100013793 for CanSino Biologics, ORG-100020693 for China Sinopharm International Corp. - Beijing location, ORG-100010771 for Sinopharm Weiqida Europe Pharmaceutical s.r.o. - Prague location, ORG-100024420 for Sinopharm Zhijun (Shenzhen) Pharmaceutical Co. Ltd. - Shenzhen location, ORG-100032020 for Novavax CZ AS, Gamaleya-Research-Institute for Gamaleya Research Institute, Vector-Institute for Vector Institute, Sinovac-Biotech for Sinovac Biotech, Bharat-Biotech for Bharat Biotech. More info at https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/release/1.3.0/valuesets/vaccine-mah-manf.json'    
+            description: 'Marketing Authorization Holder - if no MAH present, then manufacturer. EU eHealthNetwork: Value Sets for Digital Covid Certificates. version 1.0, 2021-04-16, section 2.4. The values are ORG-100001699 for AstraZeneca AB, ORG-100030215 for Biontech Manufacturing GmbH, ORG-100001417 for Janssen-Cilag International, ORG-100031184 for Moderna Biotech Spain S.L., ORG-100006270 for Curevac AG, ORG-100013793 for CanSino Biologics, ORG-100020693 for China Sinopharm International Corp. - Beijing location, ORG-100010771 for Sinopharm Weiqida Europe Pharmaceutical s.r.o. - Prague location, ORG-100024420 for Sinopharm Zhijun (Shenzhen) Pharmaceutical Co. Ltd. - Shenzhen location, ORG-100032020 for Novavax CZ AS, Gamaleya-Research-Institute for Gamaleya Research Institute, Vector-Institute for Vector Institute, Sinovac-Biotech for Sinovac Biotech, Bharat-Biotech for Bharat Biotech. More info at https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/release/1.3.0/valuesets/vaccine-mah-manf.json'    
             type: string    
+            x-ngsi:    
+              type: Property    
           mp:    
-            description: 'Property. Vaccine medicinal product. EU eHealthNetwork: Value Sets for Digital Covid Certificates. version 1.0, 2021-04-16, section 2.3. The values are EU/1/20/1528 for Comirnaty, EU/1/20/1507 for COVID-19 Vaccine Moderna, EU/1/21/1529 for Vaxzevria, EU/1/20/1525 for COVID-19 Vaccine Janssen, CVnCoV for CVnCoV, Sputnik-V for Sputnik-V, Convidecia for Convidecia, EpiVacCorona for EpiVacCorona, BBIBP-CorV for BBIBP-CorV, Inactivated-SARS-CoV-2-Vero-Cell for Inactivated SARS-CoV-2 (Vero Cell), CoronaVac for CoronaVac, Covaxin for Covaxin (also known as BBV152 A, B, C). More info at https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/release/1.3.0/valuesets/vaccine-medicinal-product.json'    
+            description: 'Vaccine medicinal product. EU eHealthNetwork: Value Sets for Digital Covid Certificates. version 1.0, 2021-04-16, section 2.3. The values are EU/1/20/1528 for Comirnaty, EU/1/20/1507 for COVID-19 Vaccine Moderna, EU/1/21/1529 for Vaxzevria, EU/1/20/1525 for COVID-19 Vaccine Janssen, CVnCoV for CVnCoV, Sputnik-V for Sputnik-V, Convidecia for Convidecia, EpiVacCorona for EpiVacCorona, BBIBP-CorV for BBIBP-CorV, Inactivated-SARS-CoV-2-Vero-Cell for Inactivated SARS-CoV-2 (Vero Cell), CoronaVac for CoronaVac, Covaxin for Covaxin (also known as BBV152 A, B, C). More info at https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/release/1.3.0/valuesets/vaccine-medicinal-product.json'    
             type: string    
+            x-ngsi:    
+              type: Property    
           sd:    
-            description: 'Property. Total Series of Doses: positive integer'    
+            description: 'Total Series of Doses: positive integer'    
             minimum: 1    
-            type: integer    
+            type: number    
+            x-ngsi:    
+              type: Property    
           tg:    
-            description: 'Property. Disease or agent targeted. EU eHealthNetwork: Value Sets for Digital Covid Certificates. version 1.0, 2021-04-16, section 2.1. For COVID19 the value has to be 840539006. More info in https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/release/1.3.0/valuesets/disease-agent-targeted.json For other values check https://www.snomed.org/snomed-ct/five-step-briefing'    
+            description: 'Disease or agent targeted. EU eHealthNetwork: Value Sets for Digital Covid Certificates. version 1.0, 2021-04-16, section 2.1. For COVID19 the value has to be 840539006. More info in https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/release/1.3.0/valuesets/disease-agent-targeted.json For other values check https://www.snomed.org/snomed-ct/five-step-briefing'    
             type: string    
+            x-ngsi:    
+              type: Property    
           vp:    
-            description: 'Property. Vaccine or prophylaxis. EU eHealthNetwork: Value Sets for Digital Covid Certificates. version 1.0, 2021-04-16, section 2.2. For COVID19 the values have to be 1119349007 for SARS-CoV-2 mRNA vaccine,1119305005 for SARS-CoV-2 antigen vaccine,J07BX03 for covid-19 vaccines. More info at https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/release/1.3.0/valuesets/vaccine-prophylaxis.json and other values at https://www.snomed.org/snomed-ct'    
+            description: 'Vaccine or prophylaxis. EU eHealthNetwork: Value Sets for Digital Covid Certificates. version 1.0, 2021-04-16, section 2.2. For COVID19 the values have to be 1119349007 for SARS-CoV-2 mRNA vaccine,1119305005 for SARS-CoV-2 antigen vaccine,J07BX03 for covid-19 vaccines. More info at https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/release/1.3.0/valuesets/vaccine-prophylaxis.json and other values at https://www.snomed.org/snomed-ct'    
             type: string    
+            x-ngsi:    
+              type: Property    
         type: object    
       maxItems: 1    
       minItems: 1    
@@ -236,11 +283,11 @@ EUProofOfVaccination:
     - type    
   type: object    
   x-derived-from: https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/release/1.3.0/DCC.combined-schema.json    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.COVID19/blob/master/EUProofOfVaccination/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.COVID19/EUProofOfVaccination/schema.json    
   x-model-tags: 'EU, COVID19'    
-  x-version: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -248,8 +295,8 @@ EUProofOfVaccination:
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
 ## ペイロードの例  
-#### EUProofOfVaccination NGSI-v2 key-value の例。  
-以下は、EUProofOfVaccinationをJSON-LD形式でkey-valuesにした例である。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータが返される。  
+#### EUProofOfVaccination NGSI-v2 キー値の例  
+以下はEUProofOfVaccinationをJSON-LD形式でkey-valuesとした例である。options=keyValues`を使用するとNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返す。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -281,7 +328,7 @@ EUProofOfVaccination:
 ```  
 </details>  
 #### EUProofOfVaccination NGSI-v2 正規化例  
-以下は、EUProofOfVaccination を JSON-LD 形式で正規化した例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、正規化された JSON-LD 形式の EUProofOfVaccination の例である。これは、オプションを使用しない場合は NGSI-v2 と互換性があり、個々のエンティティのコンテキスト・データを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -321,8 +368,8 @@ EUProofOfVaccination:
 }  
 ```  
 </details>  
-#### EUProofOfVaccination NGSI-LD key-value の例  
-ここでは、EUProofOfVaccinationをJSON-LD形式でkey-valuesにした例を示します。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータが返されます。  
+#### EUProofOfVaccination NGSI-LD キー値の例  
+以下はEUProofOfVaccinationをJSON-LD形式でkey-valuesとした例である。options=keyValues`を使うとNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返す。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -358,7 +405,7 @@ EUProofOfVaccination:
 ```  
 </details>  
 #### EUProofOfVaccination NGSI-LD 正規化例  
-以下は、EUProofOfVaccination を JSON-LD 形式で正規化した例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、正規化された JSON-LD 形式の EUProofOfVaccination の例である。これは、オプションを使用しない場合の NGSI-LD と互換性があり、個々のエンティティのコンテキスト・データを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -410,7 +457,7 @@ EUProofOfVaccination:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+マグニチュード単位の扱い方については、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照のこと。  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
