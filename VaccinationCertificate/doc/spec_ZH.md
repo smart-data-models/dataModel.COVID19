@@ -1,42 +1,42 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-Entität: ImpfungBescheinigung  
-=============================<!-- /10-Header -->  
+实体：疫苗接种证书  
+=========<!-- /10-Header -->  
 <!-- 15-License -->  
-[Offene Lizenz](https://github.com/smart-data-models//dataModel.COVID19/blob/master/VaccinationCertificate/LICENSE.md)  
-[Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+[开放许可](https://github.com/smart-data-models//dataModel.COVID19/blob/master/VaccinationCertificate/LICENSE.md)  
+[文件自动生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-Globale Beschreibung: **Beschreibung einer COVID-19-Impfbescheinigung**.  
-Version: 0.0.1  
+全球说明：**COVID-19接种证书的描述。  
+版本： 0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
-## Liste der Eigenschaften  
+## 属性列表  
 
-<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, kann es mehrere Typen oder verschiedene Formate/Muster haben</sub></sup>.  
-- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Das Land. Zum Beispiel, Spanien  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
-	- `addressLocality[string]`: Die Ortschaft, in der sich die Adresse befindet, und die in der Region liegt  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
-	- `addressRegion[string]`: Die Region, in der sich der Ort befindet, und die auf dem Land liegt  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
-	- `district[string]`: Ein Bezirk ist eine Art von Verwaltungseinheit, die in einigen Ländern von der lokalen Regierung verwaltet wird.    
-	- `postOfficeBoxNumber[string]`: Die Postfachnummer für Postfachadressen. Zum Beispiel, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
-	- `postalCode[string]`: Die Postleitzahl. Zum Beispiel, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
-	- `streetAddress[string]`: Die Straßenanschrift  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `credentialSubject[object]`: Impfstoff, Impfereignis und Empfängerobjekt  	- `administeringCentre[string]`: Name/Code der verabreichenden Stelle oder einer für die Impfung zuständigen Gesundheitsbehörde  . Model: [https://schema.org/Text](https://schema.org/Text)  
-	- `batchNumber[string]`: Eine unverwechselbare Zahlen- und/oder Buchstabenkombination, die eine Charge eindeutig identifiziert  . Model: [https://schema.org/Text](https://schema.org/Text)  
-	- `countryOfVaccination[string]`: Das Land, in dem der Impfling geimpft wurde  . Model: [https://schema.org/Text](https://schema.org/Text)  
-	- `healthProfessional[string]`: Name oder Berufsbezeichnung des für die Verabreichung des Impfstoffs oder der Prophylaxe zuständigen Arztes  . Model: [https://schema.org/Text](https://schema.org/Text)  
-	- `proof[object]`: Nachweis der Impfung    
-	- `recipient[object]`: Der Empfänger des Impfstoffs  . Model: [https://schema.org/Patient](https://schema.org/Patient)  
-- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit  - `dateCreated[date-time]`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen  - `dateModified[date-time]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben  - `description[string]`: Eine Beschreibung dieses Artikels  - `expirationDate[date-time]`: Datum und Uhrzeit des Ablaufs  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `id[*]`: Eindeutiger Bezeichner der Entität  - `issuanceDate[date-time]`: Datum und Uhrzeit der Erteilung  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `issuer[*]`: Identität des Emittenten  . Model: [http://schema.org/URL](http://schema.org/URL)- `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `type[string]`: NSGI Entity Type. es muss VaccinationCertificate sein  <!-- /30-PropertiesList -->  
+<sup><sub>[*] 如果属性中没有类型，是因为它可能有多个类型或不同的格式/模式</sub></sup>。  
+- `address[object]`: 邮寄地址  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 国家。例如，西班牙  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: 街道地址所在的地点，以及该地点所在的区域  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: 地点所在的地区，以及该地区位于哪个国家  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: 地区是一种行政区划，在一些国家由地方政府管理    
+	- `postOfficeBoxNumber[string]`: 用于邮政信箱地址的邮政信箱号码。例如：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: 邮政编码。例如：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: 街道地址  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `alternateName[string]`: 该项目的替代名称  - `areaServed[string]`: 提供服务或提供物品的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `credentialSubject[object]`: 疫苗、疫苗事件和接收对象  	- `administeringCentre[string]`: 管理中心或负责疫苗接种活动的卫生机构的名称/代码  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `batchNumber[string]`: 数字和/或字母的独特组合，专门用于识别批次  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `countryOfVaccination[string]`: 疫苗接种者接种疫苗的国家  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `healthProfessional[string]`: 负责管理疫苗或预防措施的医疗专业人员的姓名或代码  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `proof[object]`: 免疫接种证明    
+	- `recipient[object]`: 疫苗接种者  . Model: [https://schema.org/Patient](https://schema.org/Patient)  
+- `dataProvider[string]`: 标识统一数据实体提供者的字符序列  - `dateCreated[date-time]`: 实体创建时间戳。通常由存储平台分配  - `dateModified[date-time]`: 实体最后一次修改的时间戳。通常由存储平台分配  - `description[string]`: 项目描述  - `expirationDate[date-time]`: 失效日期和时间  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `id[*]`: 实体的唯一标识符  - `issuanceDate[date-time]`: 发放日期和时间  . Model: [https://schema.org/DateTime](https://schema.org/DateTime)- `issuer[*]`: 发行人的身份  . Model: [http://schema.org/URL](http://schema.org/URL)- `location[*]`: 项目的 Geojson 引用。它可以是点、线条字符串、多边形、多点、多线条字符串或多多边形  - `name[string]`: 该项目的名称  - `owner[array]`: 包含一个 JSON 编码字符序列的列表，其中引用了所有者的唯一 Ids  - `seeAlso[*]`: 指向有关该项目的其他资源的 uri 列表  - `source[string]`: 以 URL 形式给出实体数据原始来源的字符串。建议使用源提供者的完全合格域名或源对象的 URL  - `type[string]`: 必须是疫苗接种证书（VaccinationCertificate）。  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
-Erforderliche Eigenschaften  
+所需属性  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## Datenmodell Beschreibung der Eigenschaften  
-Alphabetisch sortiert (für Details anklicken)  
+## 属性的数据模型描述  
+按字母顺序排列（点击查看详情）  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -544,9 +544,9 @@ VaccinationCertificate:
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
-## Beispiel-Nutzlasten  
-#### VaccinationCertificate NGSI-v2 key-values Beispiel  
-Hier ein Beispiel für ein VaccinationCertificate im JSON-LD-Format als Key-Values. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+## 有效载荷示例  
+#### 疫苗接种证书 NGSI-v2 密钥值 示例  
+下面是一个以 JSON-LD 格式作为键值的疫苗接种证书示例。当使用 `options=keyValues` 时，它与 NGSI-v2 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -583,8 +583,8 @@ VaccinationCertificate:
 }  
 ```  
 </details>  
-#### VaccinationCertificate NGSI-v2 normalized Beispiel  
-Hier ist ein Beispiel für ein VaccinationCertificate im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+#### 疫苗接种证书 NGSI-v2 标准化示例  
+下面是一个规范化 JSON-LD 格式的疫苗接种证书示例。在不使用选项的情况下，它与 NGSI-v2 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -639,8 +639,8 @@ VaccinationCertificate:
 }  
 ```  
 </details>  
-#### VaccinationCertificate NGSI-LD key-values Beispiel  
-Hier ein Beispiel für ein VaccinationCertificate im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+#### 疫苗接种证书 NGSI-LD 密钥值 示例  
+下面是一个以 JSON-LD 格式作为键值的疫苗接种证书示例。当使用 `options=keyValues` 时，这与 NGSI-LD 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -680,8 +680,8 @@ VaccinationCertificate:
 }  
 ```  
 </details>  
-#### Impfbescheinigung NGSI-LD normalisiert Beispiel  
-Hier ist ein Beispiel für ein VaccinationCertificate im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-LD kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+#### 疫苗接种证书 NGSI-LD 标准化示例  
+下面是一个规范化 JSON-LD 格式的疫苗接种证书示例。在不使用选项时，它与 NGSI-LD 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -805,7 +805,7 @@ VaccinationCertificate:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
+请参阅 [FAQ 10](https://smartdatamodels.org/index.php/faqs/)，获取如何处理幅度单位的答案。  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  

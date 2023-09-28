@@ -16,15 +16,17 @@
       "familyName": "ABC",
       "gender": "male",
       "birthDate": "2017-01-01",
-      "vaccine": "COVID-19",
-      "atcCode": "J07BX03",
-      "medicinalProductName": "COVID-19 Vaccine Moderna",
-      "marketingAuthorizationHolder": "Moderna Biotech"
+      "vaccine": {
+        "disease": "COVID-19",
+        "atcCode": "J07BX03",
+        "medicinalProductName": "COVID-19 Vaccine Moderna",
+        "marketingAuthorizationHolder": "Moderna Biotech"
+      },
+      "proof": {
+        "created": "2017-01-01T01:20:00Z",
+        "proofValue": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..vD_vXJCWdeGpN-qKHDIlzgGC0auRPcwp3O1sOI-gN8z3UD4pI0HO_77ob5KHhhU1ugLrrwrMsKv71mqHBn-dBg",
+        "verificationMethod": "dataModel.id.VINF.982271182"
+      }
     }
-  },
-  "proof": {
-    "created": "2017-01-01T01:20:00Z",
-    "proofValue": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..vD_vXJCWdeGpN-qKHDIlzgGC0auRPcwp3O1sOI-gN8z3UD4pI0HO_77ob5KHhhU1ugLrrwrMsKv71mqHBn-dBg",
-    "verificationMethod": "dataModel.id.VINF.982271182"
   }
 }

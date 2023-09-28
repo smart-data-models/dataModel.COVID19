@@ -1,5 +1,5 @@
 ---
-# Copyleft (c) 2021 Contributors to Smart Data Models initiative
+# Copyleft (c) 2022 Contributors to Smart Data Models initiative
 # 
 
 
@@ -11,7 +11,7 @@ info:
   description:  |
     EU Digital Covid Certificate version 1.3.0 adapted to work with NGSI standard by Smart Data Models Program
   title: EUProofOfVaccination
-  version: ""
+  version: "0.0.1"
 openapi: "3.0.0"
 
 paths: 

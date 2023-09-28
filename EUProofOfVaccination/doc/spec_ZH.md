@@ -1,33 +1,33 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-Entità: EUProofOfVaccination  
-============================<!-- /10-Header -->  
+实体：EUProofOfVaccination  
+=======================<!-- /10-Header -->  
 <!-- 15-License -->  
-[Licenza aperta](https://github.com/smart-data-models//dataModel.COVID19/blob/master/EUProofOfVaccination/LICENSE.md)  
-[documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+[开放许可](https://github.com/smart-data-models//dataModel.COVID19/blob/master/EUProofOfVaccination/LICENSE.md)  
+[文件自动生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-Descrizione globale: **Certificato Covid digitale UE versione 1.3.0 adattato per funzionare con lo standard NGSI dal programma Smart Data Models**.  
-versione: 0.0.1  
+全球描述：** 欧盟数字 Covid 证书 1.3.0 版，经智能数据模型计划调整，与 NGSI 标准兼容**。  
+版本： 0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
-## Elenco delle proprietà  
+## 属性列表  
 
-<sup><sub>[*] Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o diversi formati/modelli</sub></sup>.  
-- `dob[string]`: Data di nascita. Data di nascita della persona destinataria del DCC. Formato della data ISO 8601 limitato all'intervallo 1900-2099 o vuoto.  - `id[*]`: Identificatore univoco dell'entità  - `nam[object]`: Cognome(i), nome(i) - nell'ordine  	- `fn[string]`: Cognome. Il cognome o il nome o i nomi principali della persona destinataria del certificato.    
-	- `fnt[string]`: Cognome standardizzato. Il/i cognome/i della persona, traslitterato/i ICAO 9303    
-	- `gn[string]`: Nome. Il nome o i nomi della persona destinataria del certificato.    
-- `r[array]`: Gruppo di recupero  - `t[array]`: Gruppo di test  - `type[string]`: Tipo di entità NGSI. Deve essere EUProofOfVaccination  - `v[array]`: Gruppo di vaccinazione  - `ver[string]`: Versione dello schema. Versione dello schema, secondo il versioning semantico (ISO, https://semver.org/ versione 2.0.0 o più recente).  <!-- /30-PropertiesList -->  
+<sup><sub>[*] 如果属性中没有类型，是因为它可能有多个类型或不同的格式/模式</sub></sup>。  
+- `dob[string]`: 出生日期。DCC 中收件人的出生日期。ISO 8601 日期格式限制为 1900-2099 或空  - `id[*]`: 实体的唯一标识符  - `nam[object]`: 姓、名 - 按此顺序排列  	- `fn[string]`: 姓氏。证书上所涉及人员的姓氏或主要姓名    
+	- `fnt[string]`: 标准化姓氏。人的姓氏，音译 ICAO 9303    
+	- `gn[string]`: 姓名。证书中收件人的姓名    
+- `r[array]`: 恢复小组  - `t[array]`: 测试组  - `type[string]`: NGSI 实体类型。必须是 EUProofOfVaccination  - `v[array]`: 疫苗接种组  - `ver[string]`: 模式版本。根据语义版本法（ISO、https://semver.org/ 2.0.0 或更新版本），模式的版本  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
-Proprietà richieste  
+所需属性  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-Questo modello di dati è un adattamento della versione 1.3.0 della prova di vaccinazione dell'UE. Maggiori informazioni su [https://ec.europa.eu/health/sites/default/files/ehealth/docs/vaccination-proof_interoperability-guidelines_en.pdf](https://ec.europa.eu/health/sites/default/files/ehealth/docs/vaccination-proof_interoperability-guidelines_en.pdf). L'adattamento aggiunge due attributi obbligatori per essere compatibile con lo standard NGSI, id e tipo.  
+该数据模型是对欧盟 1.3.0 版疫苗接种证明的改编。更多信息见 [https://ec.europa.eu/health/sites/default/files/ehealth/docs/vaccination-proof_interoperability-guidelines_en.pdf](https://ec.europa.eu/health/sites/default/files/ehealth/docs/vaccination-proof_interoperability-guidelines_en.pdf)。为符合 NGSI 标准，该改编增加了两个强制属性：id 和类型。  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## Modello di dati descrizione delle proprietà  
-Ordinati in ordine alfabetico (clicca per i dettagli)  
+## 属性的数据模型描述  
+按字母顺序排列（点击查看详情）  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -294,9 +294,9 @@ EUProofOfVaccination:
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
-## Esempi di payload  
-#### EUProofOfVaccination Valori chiave NGSI-v2 Esempio  
-Ecco un esempio di EUProofOfVaccination in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+## 有效载荷示例  
+#### EUProofOfVaccination NGSI-v2 关键值 示例  
+下面是一个以 JSON-LD 格式作为键值的 EUProofOfVaccination 示例。当使用 `options=keyValues` 时，它与 NGSI-v2 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -327,8 +327,8 @@ EUProofOfVaccination:
 }  
 ```  
 </details>  
-#### EUProofOfVaccination NGSI-v2 normalizzato Esempio  
-Ecco un esempio di EUProofOfVaccination in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano le opzioni e restituisce i dati di contesto di una singola entità.  
+#### EUProofOfVaccination NGSI-v2 归一化示例  
+下面是一个规范化 JSON-LD 格式的 EUProofOfVaccination 示例。在不使用选项的情况下，它与 NGSI-v2 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -368,8 +368,8 @@ EUProofOfVaccination:
 }  
 ```  
 </details>  
-#### EUProofOfVaccination Valori chiave NGSI-LD Esempio  
-Ecco un esempio di EUProofOfVaccination in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+#### EUProofOfVaccination NGSI-LD 关键值 示例  
+下面是一个以 JSON-LD 格式作为键值的 EUProofOfVaccination 示例。当使用 `options=keyValues` 时，它与 NGSI-LD 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -404,8 +404,8 @@ EUProofOfVaccination:
 }  
 ```  
 </details>  
-#### EUProofOfVaccination NGSI-LD normalizzato Esempio  
-Ecco un esempio di EUProofOfVaccination in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano le opzioni e restituisce i dati di contesto di una singola entità.  
+#### EUProofOfVaccination NGSI-LD 归一化示例  
+下面是一个以 JSON-LD 格式规范化的 EUProofOfVaccination 示例。在不使用选项时，它与 NGSI-LD 兼容，并返回单个实体的上下文数据。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -457,7 +457,7 @@ EUProofOfVaccination:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
+请参阅 [FAQ 10](https://smartdatamodels.org/index.php/faqs/)，获取如何处理幅度单位的答案。  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
