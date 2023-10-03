@@ -7,6 +7,7 @@ contributors:
  organization:
  project:
  comments: contributor to the original proof of vaccination certificate
+ year: 2022
 -
  name: Hynek
  surname: Kružík
@@ -14,6 +15,7 @@ contributors:
  organization:
  project:
  comments: contributor to the original proof of vaccination certificate
+ year: 2022
 -
  name: Martin
  surname: Lindström
@@ -21,6 +23,7 @@ contributors:
  organization:
  project:
  comments: contributor to the original proof of vaccination certificate
+ year: 2022
 -
  name: Har Preet
  surname: Singh
@@ -28,6 +31,7 @@ contributors:
  organization: FIWARE Foundation
  project: 
  comments:
+ year: 2022
 -
  name: Jakob
  surname: Schlyter
@@ -35,6 +39,7 @@ contributors:
  organization:
  project:
  comments: contributor to the original proof of vaccination certificate
+ year: 2022
 -
  name:  Dirk-Willem
  surname: van Gulik
@@ -42,6 +47,7 @@ contributors:
  organization:
  project:
  comments: contributor to the original proof of vaccination certificate
+ year: 2022
 -
  name: Gaby
  surname: Whitehead
@@ -49,3 +55,4 @@ contributors:
  organization:
  project:
  comments:  contributor to the original proof of vaccination certificate
+ year: 2022
