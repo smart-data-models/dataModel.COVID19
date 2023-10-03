@@ -1,3 +1,3 @@
-/* (Beta) Export of data model VaccinationCertificate of the subject dataModel.COVID19 for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+/* (Beta) Export of data model VaccinationCertificate of the subject dataModel.COVID19 for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE VaccinationCertificate_type AS ENUM ('VaccinationCertificate');
-CREATE TABLE VaccinationCertificate (address json, alternateName text, areaServed text, credentialSubject json, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, expirationDate timestamp, id text, issuanceDate timestamp, issuer text, location json, name text, owner json, seeAlso json, source text, type VaccinationCertificate_type);
+CREATE TABLE VaccinationCertificate (address JSON, alternateName TEXT, areaServed TEXT, credentialSubject JSON, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, expirationDate TIMESTAMP, issuanceDate TIMESTAMP, name TEXT, owner JSON, source TEXT, type VaccinationCertificate_type);
