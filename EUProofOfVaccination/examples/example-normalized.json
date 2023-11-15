@@ -19,7 +19,7 @@
     "value": "1964-01-01"
   },
   "r": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       {
         "tg": "840539006",
