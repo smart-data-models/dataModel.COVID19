@@ -18,7 +18,7 @@
     "value": "2017-01-01T01:20:00Z"
   },
   "issuer": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "dataModel.id.VINF.12233123"
   },
   "credentialSubject": {
