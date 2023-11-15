@@ -1,5 +1,5 @@
 {
-"id": "urn:ngsi-ld:1234:ABCD",
+  "id": "urn:ngsi-ld:1234:ABCD",
   "type": "EUProofOfVaccination",
   "ver": "1.3.0",
   "nam": {
