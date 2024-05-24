@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "EUProofOfVaccination"
 subject = "dataModel.COVID19"
-dob = "{'type': 'Property', 'value': {'@type': 'date-time', '@value': '1964-01-01'}}"
+dob = "1964-01-01"
 attribute = "dob"
 value = dob
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-nam = {'type': 'Property', 'value': {'fn': 'Smith-Jones', 'fnt': 'SMITH<JONES', 'gn': 'Charles Edward', 'gnt': 'CHARLES<EDWARD'}}
+nam = {'fn': 'Smith-Jones', 'fnt': 'SMITH<JONES', 'gn': 'Charles Edward', 'gnt': 'CHARLES<EDWARD'}
 attribute = "nam"
 value = nam
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-t = {'type': 'Property', 'value': [{'tg': '840539006', 'tt': 'LP6464-4', 'nm': 'ELITechGroup, SARS-CoV-2 ELITe MGB® Kit', 'sc': '2021-06-11T17:30:00Z', 'tr': '260415000', 'tc': 'Example Test Corp, Big City', 'co': 'NL', 'is': 'Ministry of Health Welfare and Sport', 'ci': 'URN:UVCI:01:NL:DADFCC47C7334E45A906DB12FD859FB7#1'}]}
-attribute = "t"
-value = t
+v = [{'tg': '840539006', 'vp': '1119349007', 'mp': 'EU/1/20/1507', 'ma': 'ORG-100031184', 'dn': 1, 'sd': 2, 'dt': '2021-06-11', 'co': 'NL', 'is': 'Ministry of Health Welfare and Sport', 'ci': 'URN:UVCI:01:NL:DADFCC47C7334E45A906DB12FD859FB7#1'}]
+attribute = "v"
+value = v
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-ver = "{'type': 'Property', 'value': '1.3.0'}"
+ver = "1.3.0"
 attribute = "ver"
 value = ver
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
