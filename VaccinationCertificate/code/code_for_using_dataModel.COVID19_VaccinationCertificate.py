@@ -24,33 +24,38 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "VaccinationCertificate"
 subject = "dataModel.COVID19"
-credentialSubject = {'batchNumber': {'type': 'Property', 'value': '1183738569'}, 'administeringCentre': {'type': 'Property', 'value': 'MoH'}, 'healthProfessional': {'type': 'Property', 'value': 'MoH'}, 'countryOfVaccination': {'type': 'Property', 'value': 'DE'}, 'recipient': {'givenName': {'type': 'Property', 'value': 'XYZ'}, 'familyName': {'type': 'Property', 'value': 'ABC'}, 'gender': {'type': 'Property', 'value': 'male'}, 'birthDate': {'type': 'Property', 'value': {'@type': 'Date', '@value': '2017-01-01'}}, 'vaccine': {'type': 'Property', 'value': {'disease': {'type': 'Property', 'value': 'COVID-19'}, 'atcCode': {'type': 'Property', 'value': 'J07BX03'}, 'medicinalProductName': {'type': 'Property', 'value': 'COVID-19 Vaccine Moderna'}, 'marketingAuthorizationHolder': {'type': 'Property', 'value': 'Moderna Biotech'}}}}, 'proof': {'type': 'Property', 'value': {'created': {'type': 'Property', 'value': {'@type': 'DateTime', '@value': '2017-01-01T01:20:00Z'}}, 'proofValue': {'type': 'Property', 'value': 'eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..vD_vXJCWdeGpN-qKHDIlzgGC0auRPcwp3O1sOI-gN8z3UD4pI0HO_77ob5KHhhU1ugLrrwrMsKv71mqHBn-dBg'}, 'verificationMethod': {'type': 'Relationship', 'value': 'urn:ngsi-ld:dataModel:id:VINF:982271182'}}}}
-attribute = "credentialSubject"
-value = credentialSubject
-# The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
-print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
-
-expirationDate = "{'type': 'Property', 'value': {'@type': 'DateTime', '@value': '2017-01-01T01:20:00Z'}}"
-attribute = "expirationDate"
-value = expirationDate
-# The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
-print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
-
-issuanceDate = "{'type': 'Property', 'value': {'@type': 'DateTime', '@value': '2017-01-01T01:20:00Z'}}"
+issuanceDate = "2017-01-01T01:20:00Z"
 attribute = "issuanceDate"
 value = issuanceDate
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-issuer = "{'type': 'Relationship', 'object': 'urn:ngsi-ld:dataModel:id:VINF:12233123'}"
+expirationDate = "2017-01-01T01:20:00Z"
+attribute = "expirationDate"
+value = expirationDate
+# The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
+print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
+
+issuer = "dataModel.id.VINF:12233123"
 attribute = "issuer"
 value = issuer
+# The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
+print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
+
+credentialSubject = {'batchNumber': '1183738569', 'administeringCentre': 'MoH', 'healthProfessional': 'MoH', 'countryOfVaccination': 'DE', 'recipient': {'givenName': 'XYZ', 'familyName': 'ABC', 'gender': 'male', 'birthDate': '2017-01-01', 'vaccine': {'disease': 'COVID-19', 'atcCode': 'J07BX03', 'medicinalProductName': 'COVID-19 Vaccine Moderna', 'marketingAuthorizationHolder': 'Moderna Biotech'}, 'proof': {'created': '2017-01-01T01:20:00Z', 'proofValue': 'eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..vD_vXJCWdeGpN-qKHDIlzgGC0auRPcwp3O1sOI-gN8z3UD4pI0HO_77ob5KHhhU1ugLrrwrMsKv71mqHBn-dBg', 'verificationMethod': 'dataModel.id.VINF.982271182'}}}
+attribute = "credentialSubject"
+value = credentialSubject
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
