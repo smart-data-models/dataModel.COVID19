@@ -1,145 +1,242 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$schemaVersion": "0.3.4",
-  "modelTags": "IUDX",
-  "$id": "https://smart-data-models.github.io/dataModel.Weather/WeatherObserved/schema.json",
-  "title": "Weather Observed schema - Smart Data Models",
-  "description": "An observation of weather conditions at a certain place and time. This data model has been developed in cooperation with mobile operators and the GSMA.",
+  "$id": "https://smart-data-models.github.io/dataModel.COVID19/EUProofOfVaccination/schema.json",
+  "title": "EU DCC",
+  "description": "EU Digital Covid Certificate version 1.3.0 adapted to work with NGSI standard by Smart Data Models Program",
+  "$schemaVersion": "0.0.1",
+  "modelTags": "EU, COVID19",
   "type": "object",
-  "allOf": [
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+  "derivedFrom": "https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/release/1.3.0/DCC.combined-schema.json",
+  "license": "https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/release/1.3.0/LICENSE",
+  "properties": {
+    "id": {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
     },
-    {
-      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    "type": {
+      "type": "string",
+      "description": "Property. NGSI entity type. It has to be EUProofOfVaccination",
+      "enum": ["EUProofOfVaccination"]
     },
-    {
-      "$ref": "https://smart-data-models.github.io/dataModel.Weather/weather-schema.json#/definitions/Weather-Commons"
+    "ver": {
+      "description": "Property. Schema version. Version of the schema, according to Semantic versioning (ISO, https://semver.org/ version 2.0.0 or newer)",
+      "type": "string",
+      "pattern": "^\\d+.\\d+.\\d+$"
     },
-    {
+    "nam": {
+      "description": "Property. Surname(s), forename(s) - in that order",
+      "type": "object",
       "properties": {
-        "type": {
+        "fn": {
+          "description": "Property. Surname. The surname or primary name(s) of the person addressed in the certificate",
           "type": "string",
-          "enum": [
-            "WeatherObserved"
-          ],
-          "description": "Property. NGSI Entity type. It has to be WeatherObserved"
+          "maxLength": 80
         },
-        "dateObserved": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/dateObserved"
-        },
-        "precipitation": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. Amount of water rain registered. Units:'Liters per square meter'. "
-        },
-        "solarRadiation": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. The solar radiation observed measured in Watts per square. Units:'w/m2'"
-        },
-        "directIrradiation": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. Direct irradiance is the part of the solar irradiance that directly reaches a surface. Units:'w/m2'"
-        },
-        "diffuseIrradiation": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. Diffuse irradiance is the part of the solar irradiance that is scattered by the atmosphere. Units:'w/m2'"
-        },
-        "pressureTendency": {
-          "oneOf": [
-            {
-              "type": "string",
-              "enum": [
-                "falling",
-                "raising",
-                "steady"
-              ]
-            },
-            {
-              "type": "number"
-            }
-          ],
-          "description": "Property. Enum:'falling, raising, steady'. Is the pressure rising or falling? It can be expressed in quantitative terms or qualitative terms"
-        },
-        "dewPoint": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Units:'Celsius degrees'. The dew point encoded as a number. Observed temperature to which air must be cooled to become saturated with water vapor"
-        },
-        "refDevice": {
-          "anyOf": [
-            {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 256,
-              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-              "description": "Property. Identifier format of any NGSI entity"
-            },
-            {
-              "type": "string",
-              "format": "uri",
-              "description": "Property. Identifier format of any NGSI entity"
-            }
-          ],
-          "description": "Relationship. Model:'https://schema.org/URL'. A reference to the device(s) which captured this observation"
-        },
-        "streamGauge": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. The water level surface elevation observed by Hydrometric measurement sensors, namely a [Stream Gauge](https://en.wikipedia.org/wiki/Stream_gauge) expressed in centimeters. Units:'centimeters'"
-        },
-        "snowHeight": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. The snow height observed by generic snow depth measurement sensors, expressed in centimeters. Units:'centimeters'"
-        },
-        "uVIndexMax": {
-          "type": "number",
-          "minimum": 0,
-          "description": "Property. Model:'https://schema.org/Number'. The maximum UV index for the period, based on the World Health Organization's UV Index measure. [http://www.who.int/uv/intersunprogramme/activities/uv_index/en/](http://www.who.int/uv/intersunprogramme/activities/uv_index/en/) the values between 1 and 11 are the valid range for the index. The value 0 is for describing that no signal is detected so no value is stored"
-        },
-        "aqiMajorPollutant": {
+        "fnt": {
+          "description": "Property. Standardised surname. The surname(s) of the person, transliterated ICAO 9303",
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Major pollutant in the Air Quality Index (AQI)"
+          "pattern": "^[A-Z<]*$",
+          "maxLength": 80
         },
-        "aqiMajorPollutantForecast": {
+        "gn": {
+          "description": "Property. Forename. The forename(s) of the person addressed in the certificate",
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Forecasted major air pollutant in the Air Quality Index (AQI) over a certain duration in future"
+          "maxLength": 80
         },
-        "airTemperatureForecast": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Forecasted value of air temperature over a certain duration in future"
-        },
-        "precipitationForecast": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Forecasted rainfall over a certain duration in future"
-        },
-        "airQualityIndex": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Air quality index is a number used to report the quality of the air on any given day"
-        },
-        "relativeHumidityForecast": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Forecasted relative humidity (water vapour in air) over a certain duration in future"
-        },
-        "airQualityIndexForecast": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Forecasted overall Air Quality Index (AQI) over a certain duration in future"
-        },
-        "airTemperatureTSA": {
-          "type": "object",
-          "description": "Property. Air temperature time series aggregation",
-          "$ref": "https://smart-data-models.github.io/dataModel.Environment/Environment-schema.json#/definitions/TimeSeriesAggregation"
+        "gnt": {
+          "description": "Property. Standardised forename. The forename(s) of the person, transliterated ICAO 9303",
+          "type": "string",
+          "pattern": "^[A-Z<]*$",
+          "maxLength": 80
         }
       }
+    },
+    "dob": {
+      "description": "Property. Date of birth. Date of Birth of the person addressed in the DCC. ISO 8601 date format restricted to range 1900-2099 or empty",
+      "type": "string",
+      "pattern": "^((19|20)\\d\\d(-\\d\\d){0,2}){0,1}$"
+    },
+    "v": {
+      "description": "Vaccination Group",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "tg": {
+            "type": "string",
+            "description": "Property. Disease or agent targeted. EU eHealthNetwork: Value Sets for Digital Covid Certificates. version 1.0, 2021-04-16, section 2.1. For COVID19 the value has to be 840539006. More info in https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/release/1.3.0/valuesets/disease-agent-targeted.json For other values check https://www.snomed.org/snomed-ct/five-step-briefing"
+          },
+          "vp": {
+            "type": "string",
+            "description": "Property. Vaccine or prophylaxis. EU eHealthNetwork: Value Sets for Digital Covid Certificates. version 1.0, 2021-04-16, section 2.2. For COVID19 the values have to be 1119349007 for SARS-CoV-2 mRNA vaccine,1119305005 for SARS-CoV-2 antigen vaccine,J07BX03 for covid-19 vaccines. More info at https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/release/1.3.0/valuesets/vaccine-prophylaxis.json and other values at https://www.snomed.org/snomed-ct"
+          },
+          "mp": {
+            "type": "string",
+            "description": "Property. Vaccine medicinal product. EU eHealthNetwork: Value Sets for Digital Covid Certificates. version 1.0, 2021-04-16, section 2.3. The values are EU/1/20/1528 for Comirnaty, EU/1/20/1507 for COVID-19 Vaccine Moderna, EU/1/21/1529 for Vaxzevria, EU/1/20/1525 for COVID-19 Vaccine Janssen, CVnCoV for CVnCoV, Sputnik-V for Sputnik-V, Convidecia for Convidecia, EpiVacCorona for EpiVacCorona, BBIBP-CorV for BBIBP-CorV, Inactivated-SARS-CoV-2-Vero-Cell for Inactivated SARS-CoV-2 (Vero Cell), CoronaVac for CoronaVac, Covaxin for Covaxin (also known as BBV152 A, B, C). More info at https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/release/1.3.0/valuesets/vaccine-medicinal-product.json"
+          },
+          "ma": {
+            "type": "string",
+            "description": "Property. Marketing Authorization Holder - if no MAH present, then manufacturer. EU eHealthNetwork: Value Sets for Digital Covid Certificates. version 1.0, 2021-04-16, section 2.4. The values are ORG-100001699 for AstraZeneca AB, ORG-100030215 for Biontech Manufacturing GmbH, ORG-100001417 for Janssen-Cilag International, ORG-100031184 for Moderna Biotech Spain S.L., ORG-100006270 for Curevac AG, ORG-100013793 for CanSino Biologics, ORG-100020693 for China Sinopharm International Corp. - Beijing location, ORG-100010771 for Sinopharm Weiqida Europe Pharmaceutical s.r.o. - Prague location, ORG-100024420 for Sinopharm Zhijun (Shenzhen) Pharmaceutical Co. Ltd. - Shenzhen location, ORG-100032020 for Novavax CZ AS, Gamaleya-Research-Institute for Gamaleya Research Institute, Vector-Institute for Vector Institute, Sinovac-Biotech for Sinovac Biotech, Bharat-Biotech for Bharat Biotech. More info at https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/release/1.3.0/valuesets/vaccine-mah-manf.json"
+          },
+          "dn": {
+            "type": "integer",
+            "description": "Property. Dose Number. Dose Number / Total doses in Series: positive integer",
+            "minimum": 1
+          },
+          "sd": {
+            "type": "integer",
+            "description": "Property. Total Series of Doses: positive integer",
+            "minimum": 1
+          },
+          "dt": {
+            "description": "ISO8601 complete date: Date of Vaccination",
+            "type": "string",
+            "format": "date"
+          },
+          "co": {
+            "type": "string",
+            "pattern": "[A-Z]{1,10}",
+            "description": "Country of Vaccination / Test, ISO 3166 alpha-2 where possible"
+          },
+          "is": {
+            "type": "string",
+            "maxLength": 80,
+            "description": "Certificate Issuer"
+          },
+          "ci": {
+            "type": "string",
+            "maxLength": 80,
+            "description": "Property. Unique Certificate Identifier: UVCI. Certificate Identifier, format as per UVCI: Annex 2 in  https://ec.europa.eu/health/sites/health/files/ehealth/docs/vaccination-proof_interoperability-guidelines_en.pdf"
+          }
+        }
+      },
+      "minItems": 1,
+      "maxItems": 1
+    },
+    "t": {
+      "type": "array",
+      "description": "Property. Test Group",
+      "items": {
+        "type": "object",
+        "description": "Test Entry",
+        "required": [
+          "tg",
+          "tt",
+          "sc",
+          "tr",
+          "co",
+          "is",
+          "ci"
+        ],
+        "properties": {
+          "tg": {
+            "type": "string",
+            "description": "Property. Disease or agent targeted. EU eHealthNetwork: Value Sets for Digital Covid Certificates. version 1.0, 2021-04-16, section 2.1. For COVID19 the value has to be 840539006. More info in https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/release/1.3.0/valuesets/disease-agent-targeted.json For other values check https://www.snomed.org/snomed-ct/five-step-briefing"
+          },
+          "tt": {
+            "type": "string",
+            "description": "Property. Type of Test. EU eHealthNetwork: Value Sets for Digital Covid Certificates version 1.0, 2021-04-16, section 2.7. The values for COVID19 are LP6464-4 for Nucleic acid amplification with probe detection, LP217198-3 for Rapid immunoassay. "
+          },
+          "nm": {
+            "description": "NAA Test Name",
+            "type": "string",
+            "maxLength": 80
+          },
+          "ma": {
+            "type": "string",
+            "description": "Property. RAT Test name and manufacturer. EU eHealthNetwork: Value Sets for Digital Covid Certificates. version 1.0, 2021-04-16, section 2.4. The values are ORG-100001699 for AstraZeneca AB, ORG-100030215 for Biontech Manufacturing GmbH, ORG-100001417 for Janssen-Cilag International, ORG-100031184 for Moderna Biotech Spain S.L., ORG-100006270 for Curevac AG, ORG-100013793 for CanSino Biologics, ORG-100020693 for China Sinopharm International Corp. - Beijing location, ORG-100010771 for Sinopharm Weiqida Europe Pharmaceutical s.r.o. - Prague location, ORG-100024420 for Sinopharm Zhijun (Shenzhen) Pharmaceutical Co. Ltd. - Shenzhen location, ORG-100032020 for Novavax CZ AS, Gamaleya-Research-Institute for Gamaleya Research Institute, Vector-Institute for Vector Institute, Sinovac-Biotech for Sinovac Biotech, Bharat-Biotech for Bharat Biotech. More info at https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/release/1.3.0/valuesets/vaccine-mah-manf.json"
+          },
+          "sc": {
+            "description": "Date/Time of Sample Collection",
+            "type": "string",
+            "format": "date-time"
+          },
+          "tr": {
+            "type": "string",
+            "description": "Property. EU eHealthNetwork: Value Sets for Digital Covid Certificates. version 1.0, 2021-04-16, section 2.9. Test Result. the values for COVID19 are 260415000 for Not detected and 260373001 for Detected. More info at https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/release/1.3.0/valuesets/test-result.json"
+          },
+          "tc": {
+            "description": "Testing Centre",
+            "type": "string",
+            "maxLength": 80
+          },
+          "co": {
+            "type": "string",
+            "pattern": "[A-Z]{1,10}",
+            "description": "Property. Country of Test, ISO 3166 alpha-2 where possible"
+          },
+          "is": {
+            "type": "string",
+            "maxLength": 80,
+            "description": "Certificate Issuer"
+          },
+          "ci": {
+            "type": "string",
+            "maxLength": 80,
+            "description": "Property. Unique Certificate Identifier: UVCI. Certificate Identifier, format as per UVCI: Annex 2 in  https://ec.europa.eu/health/sites/health/files/ehealth/docs/vaccination-proof_interoperability-guidelines_en.pdf"
+          }
+        }
+      },
+      "minItems": 1,
+      "maxItems": 1
+    },
+    "r": {
+      "description": "Recovery Group",
+      "type": "array",
+      "items": {
+        "description": "Recovery Entry",
+        "required": [
+          "tg",
+          "fr",
+          "co",
+          "is",
+          "df",
+          "du",
+          "ci"
+        ],
+        "type": "object",
+        "properties": {
+          "tg": {
+            "type": "string",
+            "description": "Property. Disease or agent targeted. EU eHealthNetwork: Value Sets for Digital Covid Certificates. version 1.0, 2021-04-16, section 2.1. For COVID19 the value has to be 840539006. More info in https://github.com/ehn-dcc-development/ehn-dcc-schema/blob/release/1.3.0/valuesets/disease-agent-targeted.json For other values check https://www.snomed.org/snomed-ct/five-step-briefing"
+          },
+          "fr": {
+            "description": "ISO 8601 complete date of first positive NAA test result",
+            "type": "string",
+            "format": "date"
+          },
+          "co": {
+            "type": "string",
+            "pattern": "[A-Z]{1,10}",
+            "description": "Property. Country of Vaccination / Test, ISO 3166 alpha-2 where possible"
+          },
+          "is": {
+            "type": "string",
+            "maxLength": 80,
+            "description": "Certificate Issuer"
+          },
+          "df": {
+            "description": "ISO 8601 complete date: Certificate Valid From",
+            "type": "string",
+            "format": "date"
+          },
+          "du": {
+            "description": "ISO 8601 complete date: Certificate Valid Until",
+            "type": "string",
+            "format": "date"
+          },
+          "ci": {
+            "type": "string",
+            "maxLength": 80,
+            "description": "Property. Unique Certificate Identifier: UVCI. Certificate Identifier, format as per UVCI: Annex 2 in  https://ec.europa.eu/health/sites/health/files/ehealth/docs/vaccination-proof_interoperability-guidelines_en.pdf"
+          }
+        }
+      },
+      "minItems": 1,
+      "maxItems": 1
     }
-  ],
+  },
   "required": [
     "id",
-    "type",
-    "dateObserved",
-    "location"
+    "type"
   ]
 }
