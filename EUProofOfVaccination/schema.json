@@ -15,7 +15,9 @@
     "type": {
       "type": "string",
       "description": "Property. NGSI entity type. It has to be EUProofOfVaccination",
-      "enum": ["EUProofOfVaccination"]
+      "enum": [
+        "EUProofOfVaccination"
+      ]
     },
     "ver": {
       "description": "Property. Schema version. Version of the schema, according to Semantic versioning (ISO, https://semver.org/ version 2.0.0 or newer)",
