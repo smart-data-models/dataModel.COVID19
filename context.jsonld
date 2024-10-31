@@ -13,14 +13,14 @@
         "batchNumber": "https://smartdatamodels.org/dataModel.COVID19/batchNumber",
         "bbox": {
             "@container": "@list",
-            "@id": "geojson:bbox"
+            "@id": "https://purl.org/geojson/vocab#bbox"
         },
         "birthDate": "https://smartdatamodels.org/dataModel.COVID19/birthDate",
         "ci": "https://smartdatamodels.org/dataModel.COVID19/ci",
         "co": "https://smartdatamodels.org/dataModel.COVID19/co",
         "coordinates": {
             "@container": "@list",
-            "@id": "geojson:coordinates"
+            "@id": "https://purl.org/geojson/vocab#coordinates"
         },
         "countryOfVaccination": "https://smartdatamodels.org/dataModel.COVID19/countryOfVaccination",
         "created": "https://smartdatamodels.org/dataModel.COVID19/created",
@@ -50,7 +50,7 @@
         "is": "https://smartdatamodels.org/dataModel.COVID19/is",
         "issuanceDate": "https://smartdatamodels.org/dataModel.COVID19/issuanceDate",
         "issuer": "https://smartdatamodels.org/dataModel.COVID19/issuer",
-        "location": "ngsi-ld:location",
+        "location": "https://uri.etsi.org/ngsi-ld/location",
         "ma": "https://smartdatamodels.org/dataModel.COVID19/ma",
         "marketingAuthorizationHolder": "https://smartdatamodels.org/dataModel.COVID19/marketingAuthorizationHolder",
         "medicinalProductName": "https://smartdatamodels.org/dataModel.COVID19/medicinalProductName",
